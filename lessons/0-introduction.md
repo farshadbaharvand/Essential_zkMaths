@@ -1,69 +1,118 @@
-# Numbers and Terminology
+# Numbers, Fields, and Complexity in Cryptography and ZKPs
 
-## Introduction
-Understanding **numbers and their properties** is fundamental for zero-knowledge proofs (ZKPs). Cryptography relies heavily on different types of numbers and fields to ensure security, efficiency, and mathematical rigor.
+## Introduction — why this topic matters in ZKPs or cryptography
+Understanding **numbers, fields, and complexity theory** is foundational for cryptography and **zero-knowledge proofs (ZKPs)**. Finite fields provide **secure, precise arithmetic**, modular arithmetic enables **efficient cryptographic operations**, and complexity theory guides the design of protocols that are both **secure and tractable**. Groups and fields underpin elliptic curve cryptography, and computational hardness assumptions support zero-knowledge proofs.
 
 ## Explanation
 
-### Integers
-The set of **Integers** is denoted by $$\mathbb{Z}$$.  
-Example:  
-$$\mathbb{Z} = \{\dots, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dots\}$$
+### Numbers and Terminology
+- **Integers ($\mathbb{Z}$):** {..., -3, -2, -1, 0, 1, 2, 3, ...}  
+- **Rational Numbers ($\mathbb{Q}$):** fractions $\frac{a}{b}$ with $b \neq 0$  
+- **Real Numbers ($\mathbb{R}$):** all decimal numbers, including irrationals  
+- **Finite Fields ($\mathbb{F}_p$):** integers modulo a prime $p$ with multiplicative inverses
 
-### Rational Numbers
-The set of **Rational Numbers** is denoted by $$\mathbb{Q}$$.  
-Example:  
-$$\mathbb{Q} = \left\{ \dots, -\frac{3}{2}, -1, 0, \frac{1}{2}, 1, \frac{3}{2}, \dots \right\}$$
+Finite fields are used in cryptography because they have **short, exact representations** and support arithmetic operations with well-defined inverses.
 
-### Real Numbers
-The set of **Real Numbers** is denoted by $$\mathbb{R}$$.  
-Example:  
-$$\mathbb{R} = \{ -4, 0, 2, \pi, \sqrt{2}, 613, \dots \}$$
+### Modular Arithmetic
+Modular arithmetic computes the **remainder** after division:
+
+$$
+n \bmod k = \text{remainder when $n$ is divided by $k$}
+$$
+
+Examples:
+
+$$
+25 \bmod 3 = 1
+$$
+
+$$
+15 \bmod 4 = 3
+$$
+
+The remainder is always taken as **positive**.
+
+### Group Theory
+A **group** $(G, \cdot)$ is a set $G$ with a binary operation $\cdot$ satisfying:
+
+1. **Closure:** $\forall a,b \in G, a \cdot b \in G$  
+2. **Associativity:** $(a \cdot b) \cdot c = a \cdot (b \cdot c)$  
+3. **Identity element:** $\exists e \in G: e \cdot a = a \cdot e = a$  
+4. **Inverse element:** $\forall a \in G, \exists a^{-1} \in G: a \cdot a^{-1} = e$  
+
+- **Subgroups:** subsets of $G$ that also satisfy group properties  
+- **Cyclic groups:** a group with a **generator** $g$ such that repeated application of the operation generates all elements
 
 ### Fields
-A **field** is a set with two operations: **addition** and **multiplication**, satisfying certain axioms: associativity, commutativity, identities, inverses, and distributivity.  
+A **field** $(F, +, \cdot)$ has addition and multiplication with the following axioms:
 
-- Finite fields are denoted by $$\mathbb{F}$$  
-- Real or complex fields are denoted by $$\mathbb{K}$$  
-- Integers modulo a prime $$p$$: $$\mathbb{Z}^*_p$$
+1. **Associativity:** $a + (b + c) = (a + b) + c$, $a \cdot (b \cdot c) = (a \cdot b) \cdot c$  
+2. **Commutativity:** $a + b = b + a$, $a \cdot b = b \cdot a$  
+3. **Identities:** $0$ for addition, $1$ for multiplication, $a + 0 = a$, $a \cdot 1 = a$  
+4. **Inverses:** additive $-a$, multiplicative $a^{-1}$ (for $a \neq 0$)  
+5. **Distributivity:** $a \cdot (b + c) = a \cdot b + a \cdot c$
 
-We use **finite fields** in cryptography because their elements have **short, exact representations** and useful mathematical properties.
+#### Finite Fields and Generators
+- A **finite field** $\mathbb{F}_p$ has $p$ elements: $\{0,1,...,p-1\}$  
+- The **order** of the field is the number of elements  
+- Every finite field has a **generator** $g$ such that:
 
-### Example: Finite Field
-For prime $$p = 5$$, the finite field is:  
-$$\mathbb{Z}^*_5 = \{0,1,2,3,4\}$$
+$$
+\{g^0, g^1, g^2, ..., g^{p-1}\} = \mathbb{F}_p^*
+$$
 
-Operations are done **modulo 5**. For example:  
-$$3 \times 4 = 12 \equiv 2 \pmod{5}$$
+Example: $\mathbb{F}_5 = \{0,1,2,3,4\}$, generator $2$:  
 
-This field is **cyclic** and has **generators** 2 and 3, meaning repeated powers of the generator produce all elements:
+$$
+2^1 = 2, \quad 2^2 = 4, \quad 2^3 = 3, \quad 2^4 = 1
+$$
 
-~~~~
-# Cyclic generation example
-g = 2
-2^0 mod 5 = 1
-2^1 mod 5 = 2
-2^2 mod 5 = 4
-2^3 mod 5 = 3
-2^4 mod 5 = 1  # cycle repeats
-~~~~
+### Complexity Theory
+Complexity theory studies **time and space requirements** to solve computational problems.  
 
-## Tables
+- **Decision problem:** answers are yes/no  
+- **Class P:** problems solvable in **polynomial time**  
+- **Class NP:** problems whose **solutions can be verified** in polynomial time  
+- **NP-Complete:** hardest problems in NP; solving one efficiently solves all NP problems  
+- **NP-Hard:** at least as hard as NP-Complete; may not be in NP
 
-| Number Type | Symbol | Example |
-|-------------|--------|---------|
-| Integers | $$\mathbb{Z}$$ | -2, 0, 3 |
-| Rational | $$\mathbb{Q}$$ | 1/2, 2, -3/4 |
-| Real | $$\mathbb{R}$$ | √2, π, 5 |
-| Finite Field | $$\mathbb{Z}^*_5$$ | 0,1,2,3,4 |
+#### Example: Travelling Salesman Problem
+- Small $n$ (3 cities): try all permutations, feasible  
+- Large $n$: number of permutations grows factorially, unfeasible  
+- Time grows with input size $n$, illustrating **problem hardness**
+
+### Interactive Proofs (IP)
+- **Interactive Proofs** are central in ZKPs  
+- A prover and verifier interact to **prove statements without revealing secrets**  
+- IP class connects **complexity theory** with **zk-proof systems**  
+
+Example: Goldreich, MiCali, and Wigderson show:
+
+> Every language that admits an interactive proof can also admit a **computational zero-knowledge interactive proof**, assuming secure probabilistic encryption.
+
+### Tables — Number and Complexity Summary
+
+| Concept | Symbol | Description | Role in Cryptography/ZKPs |
+|---------|--------|------------|---------------------------|
+| Integers | $\mathbb{Z}$ | Whole numbers | Basic arithmetic operations |
+| Rationals | $\mathbb{Q}$ | Fractions | Represent ratios, rational computations |
+| Reals | $\mathbb{R}$ | All decimal numbers | Continuous values in theory |
+| Finite Field | $\mathbb{F}_p$ | Integers modulo prime | Cryptographic operations with inverses |
+| Group | $(G, \cdot)$ | Set + operation satisfying axioms | Basis for ECC and other protocols |
+| Cyclic Group | - | Generated by a single element | Efficient exponentiation, Diffie-Hellman |
+| P | - | Polynomial-time solvable problems | Efficiently computable tasks |
+| NP | - | Solutions verifiable in poly-time | Verifiable statements in zk-systems |
+| NP-Complete | - | Hardest in NP | Basis for hardness assumptions |
+| NP-Hard | - | At least as hard as NP-Complete | Security assumptions for cryptography |
+| Interactive Proof | IP | Prover-verifier communication | Core model for ZKPs |
 
 ## Key Takeaways
-
-- **Integers, rationals, and reals** form the foundation of numbers in ZKPs.  
-- **Fields** provide a structured set with addition and multiplication rules.  
-- **Finite fields** are critical in cryptography and ZK proofs due to their compact representation.  
-- **Generators** in cyclic fields allow traversal of all elements via repeated operations.  
-
+- **Finite fields** provide exact arithmetic and support cryptography.  
+- **Modular arithmetic** enables operations suitable for cyclic groups.  
+- **Groups and cyclic groups** underpin elliptic curve cryptography.  
+- **Complexity classes** (P, NP, NP-Complete, NP-Hard) explain problem tractability.  
+- **Interactive proofs** allow secure, zero-knowledge verification of statements.  
+- These mathematical foundations ensure **security, efficiency, and privacy** in ZKP systems.
 
 ---
 
