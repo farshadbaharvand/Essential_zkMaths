@@ -16,6 +16,8 @@ Finite fields are used in cryptography because they have **short, exact represen
 ### Modular Arithmetic
 Modular arithmetic computes the **remainder** after division:
 
+![Modular Arithmetic](./images/0-introduction/Modular_Arithmetic.png)
+
 $$
 n \bmod k = \text{remainder when $n$ is divided by $k$}
 $$
