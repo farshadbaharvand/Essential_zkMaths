@@ -9,7 +9,7 @@ Understanding **numbers, fields, and complexity theory** is foundational for cry
 - **Integers ($\mathbb{Z}$):** {..., -3, -2, -1, 0, 1, 2, 3, ...}  
 - **Rational Numbers ($\mathbb{Q}$):** fractions $\frac{a}{b}$ with $b \neq 0$  
 - **Real Numbers ($\mathbb{R}$):** all decimal numbers, including irrationals  
-- **Finite Fields ($\mathbb{F}_p$):** integers modulo a prime $p$ with multiplicative inverses
+- **Finite Fields ($\mathbb{F}$):** Fields are denoted by $\mathbb{F}$ or $\mathbb{K}$. Examples include the real numbers $\mathbb{R}$ and the complex numbers $\mathbb{C}$. For a prime $p$, the set $\mathbb{Z}_p$ forms a field, and its nonzero elements $\mathbb{Z}_p^*$ form a multiplicative group with inverses.
 
 Finite fields are used in cryptography because they have **short, exact representations** and support arithmetic operations with well-defined inverses.
 
