@@ -50,9 +50,10 @@ A **field** $(F, +, \cdot)$ has addition and multiplication with the following a
 
 1. **Associativity:** $a + (b + c) = (a + b) + c$, $a \cdot (b \cdot c) = (a \cdot b) \cdot c$  
 2. **Commutativity:** $a + b = b + a$, $a \cdot b = b \cdot a$  
-3. **Identities:** $0$ for addition, $1$ for multiplication, $a + 0 = a$, $a \cdot 1 = a$  
-4. **Inverses:** additive $-a$, multiplicative $a^{-1}$ (for $a \neq 0$)  
-5. **Distributivity:** $a \cdot (b + c) = a \cdot b + a \cdot c$
+3. **Identities:** $0$ for addition, $1$ for multiplication, $a + 0 = a$, $a \cdot 1 = a$ 
+4. **Additive Inverses:** For every \(a \in F\), there exists an element in \(F\), denoted **-a**, called the **additive inverse** of \(a\), such that: \[a + (-a) = 0\]
+5. **Multiplicative Inverses:** For every \(a \neq 0 \in F\), there exists an element in \(F\), denoted **a⁻¹**, called the **multiplicative inverse** of \(a\), such that:\[a \cdot a^{-1} = 1\]
+6. **Distributivity:** $a \cdot (b + c) = a \cdot b + a \cdot c$
 
 #### Finite Fields and Generators
 - A **finite field** $\mathbb{F}_p$ has $p$ elements: $\{0,1,...,p-1\}$  
