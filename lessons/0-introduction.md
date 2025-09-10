@@ -86,8 +86,8 @@ See this [introduction](https://www.khanacademy.org/computing/computer-science/c
 When we write **n mod k**, it means the **remainder** when $$n$$ is divided by $$k$$.  
 
 ### Examples
-- $$ 25 \mod 3 = 1 $$  
-- $$ 15 \mod 4 = 3 $$  
+- $$25 \mod 3 = 1$$  
+- $$15 \mod 4 = 3$$  
 
 The remainder should always be **positive**.
 
@@ -95,9 +95,9 @@ The remainder should always be **positive**.
 ---
 
 ## Summary
-- $$ \mathbb{Z} $$ = integers  
-- $$ \mathbb{Q} $$ = rationals  
-- $$ \mathbb{R} $$ = reals  
+- $$\mathbb{Z} $$= integers  
+- $$\mathbb{Q} $$= rationals  
+- $$\mathbb{R} $$= reals  
 - $$ \mathbb{F} $$ = finite fields  
 - Modular arithmetic is **remainder arithmetic**, essential in cryptography.  
 
