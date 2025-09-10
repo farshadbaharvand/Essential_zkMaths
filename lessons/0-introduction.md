@@ -50,7 +50,7 @@ Integers include negative numbers, zero, and positive numbers.
 ### 2. Rational Numbers
 The set of **rational numbers** is denoted by $$\mathbb{Q}$$:  
 
-$$ \left\{ 1, \frac{3}{2}, 2, \frac{22}{7}, \dots \right\} $$  
+$$ \{ 1, \frac{3}{2}, 2, \frac{22}{7}, \dots \} $$  
 
 Rational numbers are numbers that can be expressed as fractions of integers.
 
