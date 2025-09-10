@@ -95,10 +95,10 @@ The remainder should always be **positive**.
 ---
 
 ## Summary
-- $$\mathbb{Z} $$= integers  
-- $$\mathbb{Q} $$= rationals  
-- $$\mathbb{R} $$= reals  
-- $$ \mathbb{F} $$ = finite fields  
+- $$\mathbb{Z}$$= integers  
+- $$\mathbb{Q}$$= rationals  
+- $$\mathbb{R}$$= reals  
+- $$\mathbb{F}$$= finite fields  
 - Modular arithmetic is **remainder arithmetic**, essential in cryptography.  
 
 **Key point**: Modular arithmetic and finite fields form the backbone of modern zero-knowledge proof mathematics.  
@@ -109,12 +109,12 @@ The remainder should always be **positive**.
 
 ## Group Theory
 
-Simply put, a **group** is a set of elements $$ \{a, b, c, \dots\} $$ plus a binary operation (denoted here as $$ \cdot $$).  
+Simply put, a **group** is a set of elements $$\{a, b, c, \dots\}$$ plus a binary operation (denoted here as $$\cdot$$).  
 
 To be considered a group, this combination needs to have certain properties:
 
 1. **Closure**  
-   For all $$ a, b \in G $$, the result of the operation $$ a \cdot b $$ is also in $$ G $$.  
+   For all $$a, b \in G $$, the result of the operation $$a \cdot b $$is also in $$ G $$.  
 
 2. **Associativity**  
    For all $$ a, b, c \in G $$:  
