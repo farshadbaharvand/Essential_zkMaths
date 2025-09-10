@@ -36,402 +36,280 @@ Pester me via
 
 ---
 
-## Numbers and Terminology
+# Numbers and Terminology: A Beginner-Friendly Guide
 
-### 1. Integers
-The set of **integers** is denoted by $$\mathbb{Z}$$:  
-
-$$\{ \dots, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dots \} $$  
-
-Integers include negative numbers, zero, and positive numbers.
+This guide introduces the **basic number sets** and **fields**, with examples, tables, and step-by-step explanations. It is designed to be fully formatted in Markdown and ready to save as a `.md` file.
 
 ---
 
-### 2. Rational Numbers
-The set of **rational numbers** is denoted by $$\mathbb{Q}$$:  
+## 1. Integers
 
-$$\{ 1, \frac{3}{2}, 2, \frac{22}{7}, \dots \} $$  
+The set of **Integers** is denoted by:
 
-Rational numbers are numbers that can be expressed as fractions of integers.
+$$
+\mathbb{Z} = \{\dots, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dots \}
+$$
 
----
+**Explanation:**  
+Integers include negative numbers, zero, and positive numbers. They are the fundamental building blocks for arithmetic operations like addition, subtraction, multiplication, and division (excluding fractions).
 
-### 3. Real Numbers
-The set of **real numbers** is denoted by $$\mathbb{R}$$:  
+**Examples:**
+- Positive integers: 1, 2, 3
+- Negative integers: -1, -2, -3
+- Zero: 0
 
-$$\{ 2, -4, 613, \pi, \sqrt{2}, \dots \} $$  
+**Table: Integers Examples**
 
-Real numbers include both rationals and irrationals (like $$\pi$$ and $$\sqrt{2}$$).
-
----
-
-### 4. Fields
-- **Fields** are denoted by $$\mathbb{F}$$ if they are finite.  
-- For real or complex numbers, we may use $$\mathbb{K}$$.  
-- We also use $$\mathbb{Z}_p^*$$ to represent the set of integers modulo a prime $$p$$ with multiplicative inverses.  
-
-**Why finite fields in cryptography?**  
-- Elements have **short, exact representations**.  
-- They have **useful algebraic properties** (inverses, closure, etc.).  
+| Negative | Zero | Positive |
+|----------|------|----------|
+| -3       | 0    | 1        |
+| -2       |      | 2        |
+| -1       |      | 3        |
 
 ---
 
-## Modular Arithmetic
+## 2. Rational Numbers
 
-See this [introduction](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic).
+The set of **Rational Numbers** is denoted by:
 
-![Modular Arithmetic Example](img/Screenshot%202022-02-21%20at%2009.03.23.png)
+$$
+\mathbb{Q} = \left\{ \frac{p}{q} \ \bigg|\ p \in \mathbb{Z},\ q \in \mathbb{Z}\setminus \{0\} \right\}
+$$
 
-### Concept
-When we write **n mod k**, it means the **remainder** when $$n$$ is divided by $$k$$.  
+**Explanation:**  
+Rational numbers are numbers that can be expressed as the fraction of two integers. They include integers (where the denominator is 1) and fractions like 1/2 or 22/7.
 
-### Examples
-- $$25 \mod 3 = 1$$  
-- $$15 \mod 4 = 3$$  
+**Examples:**
+- $\frac{3}{2}$ (fraction)
+- $2$ (integer, since $2 = \frac{2}{1}$)
+- $\frac{22}{7}$ (approximation of $\pi$)
 
-The remainder should always be **positive**.
-
-
----
-
-## Summary
-- $$\mathbb{Z}$$= integers  
-- $$\mathbb{Q}$$= rationals  
-- $$\mathbb{R}$$= reals  
-- $$\mathbb{F}$$= finite fields  
-- Modular arithmetic is **remainder arithmetic**, essential in cryptography.  
-
-**Key point**: Modular arithmetic and finite fields form the backbone of modern zero-knowledge proof mathematics.  
-
+**Tips:**  
+- Rational numbers can always be written as terminating or repeating decimals.
+- Fractions must have a **non-zero denominator**.
 
 ---
 
+## 3. Real Numbers
 
-## Group Theory
+The set of **Real Numbers** is denoted by:
 
-Simply put, a **group** is a set of elements $$\{a, b, c, \dots\}$$ plus a binary operation (denoted here as $$\cdot$$).  
+$$
+\mathbb{R} = \{ 2, -4, 613, \pi, \sqrt{2}, \dots \}
+$$
 
-To be considered a group, this combination needs to have certain properties:
+**Explanation:**  
+Real numbers include all rational and irrational numbers. Irrational numbers, like $\pi$ and $\sqrt{2}$, cannot be written as fractions.
 
-1. **Closure**  
-   For all $$a, b \in G $$, the result of the operation $$a \cdot b$$ is also in $$G$$.  
+**Examples:**
+- Rational: $4$, $-7$, $\frac{3}{4}$
+- Irrational: $\pi$, $\sqrt{2}$
 
-2. **Associativity**  
-   For all $$a, b, c \in G $$:  
-   $$(a \cdot b) \cdot c = a \cdot (b \cdot c) $$  
+**Table: Real Numbers Categories**
 
-3. **Identity element**  
-   There exists an element $$e \in G $$ such that, for every $$a \in G $$:  
-   $$e \cdot a = a \cdot e = a $$  
-   Such an element is **unique**.  
-
-4. **Inverse element**  
-   For each $$a \in G $$, there exists an element $$b \in G $$, commonly denoted $$a^{-1} $$(or $$-a $$ if the operation is addition), such that:  
-   $$a \cdot b = b \cdot a = e $$  
-
----
-
-### Subgroups
-If a subset of the elements in a group also satisfies the **group properties**, then that subset is called a **subgroup**.  
-
-Example: The even integers form a subgroup of the integers under addition.
+| Type       | Examples        |
+|------------|----------------|
+| Rational   | 1/2, -3, 4     |
+| Irrational | π, √2, e       |
 
 ---
 
-### Cyclic Groups and Generators
-A **cyclic group** is a finite group that has a **generator element**.  
+## 4. Fields
 
-- Starting at the generator and repeatedly applying the group operation produces every element of the group.  
+A **field** is a set equipped with two operations: **addition** and **multiplication**, satisfying certain properties (closure, associativity, identity, inverses, distributivity).
 
-Example:  
-Consider the integers mod 4 under addition: $$\{0,1,2,3\} $$  
-- Generator = 1:  
-  $$0 + 1 = 1, \; 1 + 1 = 2, \; 2 + 1 = 3, \; 3 + 1 = 0 \ (\text{mod } 4) $$  
-Thus, the group is cyclic.
+**Notation:**
+- Finite field: $\mathbb{F}$
+- Real or complex field: $\mathbb{K}$
+- Integers modulo a prime $p$ with multiplicative inverses: $\mathbb{Z}^*_p$
+
+**Explanation:**  
+Fields are used in cryptography because:
+- Elements have **short, exact representations**
+- They support **arithmetic operations with inverses**
+- They enable **modular arithmetic** and advanced protocols like zero-knowledge proofs
+
+**Example: Finite Field modulo 5**
+
+$$
+\mathbb{Z}_5^* = \{1, 2, 3, 4\}
+$$
+
+**Operations mod 5:**
+- $3 + 4 \equiv 2 \ (\text{mod } 5)$
+- $2 \times 3 \equiv 1 \ (\text{mod } 5)$
+
+**Table: Finite Field Elements and Operations (mod 5)**
+
+| a | b | a + b (mod 5) | a × b (mod 5) |
+|---|---|----------------|----------------|
+| 1 | 2 | 3              | 2              |
+| 3 | 4 | 2              | 2              |
+| 2 | 3 | 0              | 1              |
+
+**Notes:**
+- Modular arithmetic ensures results stay **within the field**.
+- Finite fields are **cyclic**, meaning a generator element can produce all elements of the field by repeated multiplication.
 
 ---
 
-## Fields
+**Summary Table: Number Sets**
 
-A **field** is a set together with two operations: **addition** and **multiplication**.  
-
-### Examples
-- Real numbers under addition and multiplication.  
-- Integers mod a prime number under addition and multiplication.  
+| Set               | Symbol        | Includes                       |
+|------------------|---------------|--------------------------------|
+| Integers          | $\mathbb{Z}$ | ..., -2, -1, 0, 1, 2, ...     |
+| Rational Numbers  | $\mathbb{Q}$ | Fractions of integers          |
+| Real Numbers      | $\mathbb{R}$ | Rational + Irrational numbers  |
+| Finite Fields     | $\mathbb{F}$ | Elements mod prime p           |
 
 ---
 
-### Field Axioms  
-Let $$a, b, c \in \mathbb{F} $$ (a field):  
+# Modular Arithmetic, Group Theory, and Fields: A Comprehensive Guide
 
-1. **Associativity** of addition and multiplication.  
-2. **Commutativity** of addition and multiplication.  
-3. Existence of **additive identity** (0) and **multiplicative identity** (1).  
-4. Existence of **additive inverses** (for each $$a $$, there is $$-a $$).  
-5. Existence of **multiplicative inverses** (for each $$a \neq 0 $$, there is $$a^{-1} $$).  
-6. **Distributivity**:  
-   $$a \cdot (b + c) = (a \cdot b) + (a \cdot c) $$  
+This guide provides a **step-by-step, beginner-friendly explanation** of modular arithmetic, group theory, and fields, complete with **formulas, tables, examples, diagrams, and tips**. All content is formatted in Markdown and ready to save as a `.md` file.
+
+---
+
+## 1. Modular Arithmetic
+
+**Definition:**  
+Modular arithmetic deals with integers and a **modulus**, denoted as `n mod k`, meaning the **remainder** when `n` is divided by `k`.
+
+**Examples:**
+
+$$
+25 \mod 3 = 1
+$$
+
+$$
+15 \mod 4 = 3
+$$
+
+**Note:** The remainder should always be positive.
+
+**Explanation:**  
+Modular arithmetic is often called "clock arithmetic" because numbers wrap around after reaching the modulus. It is widely used in cryptography, computer science, and number theory.
+
+**Table: Examples of Modulo Operation**
+
+| n   | k | n mod k |
+|-----|---|---------|
+| 25  | 3 | 1       |
+| 15  | 4 | 3       |
+| 7   | 5 | 2       |
+
+**Tips:**  
+- Modular arithmetic is **cyclic**: after reaching k, it resets to 0.  
+- Useful for **hashing, cryptography, and random number generation**.
+
+---
+
+## 2. Group Theory
+
+**Definition:**  
+A **group** is a set of elements $\{a, b, c, ...\}$ with a **binary operation** (denoted `•`) that satisfies **four properties**:
+
+1. **Closure:**  
+   For all $a, b \in G$, $a • b \in G$.
+2. **Associativity:**  
+   $(a • b) • c = a • (b • c)$ for all $a, b, c \in G$.
+3. **Identity element:**  
+   There exists $e \in G$ such that $e • a = a • e = a$ for all $a \in G$.
+4. **Inverse element:**  
+   For each $a \in G$, there exists $a^{-1} \in G$ such that $a • a^{-1} = a^{-1} • a = e$.
+
+**Subgroups:**  
+A **subgroup** is a subset of a group that itself satisfies all group properties.
+
+**Cyclic Groups and Generators:**  
+A **cyclic group** has a generator $g$ such that repeatedly applying the group operation generates all elements of the group:
+
+$$
+g^0, g^1, g^2, ..., g^{n-1} = \text{all elements of the group}
+$$
+
+**Example Table: Cyclic Group of Order 4**
+
+| Element | Powers of g |
+|---------|-------------|
+| g       | $$g^0=1, g^1=g, g^2=g^2, g^3=g^3$$ |
+
+---
+
+## 3. Fields
+
+**Definition:**  
+A **field** is a set of elements with **two operations**: addition `+` and multiplication `·`, satisfying the **field axioms**.
+
+### Field Axioms
+
+Let $a, b, c \in \mathbb{F}$:
+
+1. **Associativity:**  
+   $a + (b + c) = (a + b) + c$,  $a · (b · c) = (a · b) · c$
+2. **Commutativity:**  
+   $a + b = b + a$,  $a · b = b · a$
+3. **Identity elements:**  
+   $0$ for addition: $a + 0 = a$,  
+   $1$ for multiplication: $a · 1 = a$
+4. **Additive inverses:**  
+   For every $a$, there exists $-a$ such that $a + (-a) = 0$
+5. **Multiplicative inverses:**  
+   For every $a \ne 0$, there exists $a^{-1}$ such that $a · a^{-1} = 1$
+6. **Distributivity:**  
+   $a · (b + c) = (a · b) + (a · c)$
 
 ---
 
 ### Finite Fields and Generators
 
-- **Order** = number of elements in the field.  
-- Order must be a **prime** (prime field) or **power of a prime** (extension field).  
-- Elements represented as integers $$\{0, 1, \dots, p-1\} $$ when modulus is prime $$p $$.  
-- Every finite field has a **generator** (a primitive element).  
+**Definition:**  
+A **finite field** has a finite set of elements, often integers modulo a prime $p$: $\mathbb{Z}_p = \{0, 1, ..., p-1\}$.
 
-Example: Prime $$p = 5 $$  
-$$\mathbb{Z}_5^* = \{0, 1, 2, 3, 4\} $$  
+**Order of a field:**  
+The number of elements in the field's set. Must be either:
+- **Prime** (prime field)  
+- **Power of a prime** (extension field)
 
-Operations are **mod 5**:  
-- $$3 \times 4 = 12 \equiv 2 \pmod{5} $$  
+**Generator in a Finite Field:**  
+An element $g$ such that exponentiating it generates all nonzero elements:
 
-This field is **cyclic** and has two generators: 2 and 3.  
+$$
+g^0, g^1, g^2, ..., g^{p-2} = \text{all nonzero elements}
+$$
 
----
+**Example: Finite Field $\mathbb{Z}^*_5$**
 
-# Complexity Theory
+$$
+\mathbb{Z}^*_5 = \{1, 2, 3, 4\}
+$$
 
-**Complexity theory** studies the time or space requirements to solve a problem, depending on the size of the input.
+**Operations modulo 5:**
 
-### Main Classes
-- **P**: Problems solvable in **polynomial time**.  
-- **NP**: Problems verifiable in **polynomial time**.  
-- **NP-Complete**: The hardest problems in NP. If one can be solved in polynomial time, all can.  
-- **NP-Hard**: At least as hard as NP-complete problems (may not even be in NP).  
+| a | b | a + b (mod 5) | a × b (mod 5) |
+|---|---|----------------|----------------|
+| 3 | 4 | 2              | 2              |
+| 2 | 3 | 0              | 1              |
 
----
+**Generators:**  
+- 2 and 3 are generators:  
+  - Powers of 2: $2^1=2, 2^2=4, 2^3=3, 2^4=1$  
+  - Powers of 3: $3^1=3, 3^2=4, 3^3=2, 3^4=1$
 
-### Example: Travelling Salesman Problem
-- Given a list of cities and distances between them, find the shortest possible route visiting each city once and returning to the start.  
-- This problem is **NP-hard**.  
-
----
-
-### References
-- [Classic Nintendo Games Are (Computationally) Hard](https://arxiv.org/abs/1203.1895)  
-- ["Everything provable is provable in zero knowledge"](https://dl.acm.org/doi/pdf/10.5555/88314.88333)  
-
----
-
-### Interactive Proofs (IP)
-- **Interactive Proofs** are protocols where a prover and verifier interact to establish truth.  
-- Reference: [Videos by Alessandro Chiesa](https://www.youtube.com/watch?v=pMzpQ82Q88Q)  
+**Tips:**  
+- Finite fields are **cyclic**, and generators allow compact representation.  
+- Modular arithmetic ensures results **stay within the field**, crucial for cryptography.
 
 ---
 
+### Summary Table: Number Sets and Fields
 
-# Complexity, Elliptic Curves, and Polynomials in Cryptography
-
-This guide introduces **Big O notation**, **elliptic curves**, **pairings**, and **polynomials** with a focus on their use in cryptography and zero-knowledge proofs (ZKPs).  
-
-It is designed to be **beginner-friendly**, step-by-step, and full of examples, equations, and references.
-
----
-
-# Big O Notation
-
-Big O describes the **complexity** of code using algebraic terms. It tells us how the runtime or memory grows as input size increases.  
-
-Example:  
-- **$O(1)$** → Constant time (no matter input size).  
-- **$O(n)$** → Linear time.  
-- **$O(n^2)$** → Quadratic time. Runtime grows proportionally to the square of the input size.  
-
-Equation example:  
-$$T(n) = 5n^2 + 3n + 2 \in O(n^2)$$
-
-Visualisation:  
-
-![Big O](http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif)
-
-Comparison of complexities in ZK proofs:  
-![ZKP Complexity Comparison](https://i.imgur.com/SH7BExt.png)
+| Concept          | Symbol         | Elements / Properties                                    |
+|-----------------|----------------|---------------------------------------------------------|
+| Modular arithmetic | n mod k       | Remainder after division                                  |
+| Group            | G             | Closure, associativity, identity, inverses              |
+| Cyclic Group     | -             | Has generator g                                         |
+| Field            | $\mathbb{F}$  | Two operations (+, ·), satisfies field axioms          |
+| Finite Field     | $\mathbb{Z}_p$| Elements modulo prime, cyclic, has generators          |
 
 ---
-
-# Elliptic Curves
-
-Elliptic curves are defined by an equation:  
-$$y^{2} = x^{3} + ax + b$$  
-
-They form a **group** under a special addition rule. This makes them useful in cryptography.
-
-## Families of Curves
-
-1. **Montgomery Curves**  
-   Equation:  
-   $$y^{2} = x^{3} + 486662x^{2} + x$$  
-   - Example: **Curve25519**  
-   - Used in **ECDH (Diffie–Hellman)**.  
-   - BN254/BN128 used in **Ethereum zkSNARKs**.  
-   - BLS12-381 used in **ZCash**.  
-
-   ![Montgomery Curve](img/mont.jpeg)
-
-2. **Edwards Curves**  
-   Equation:  
-   $$ax^{2}+y^{2}=1+dx^{2}y^{2}$$  
-   - If **a = 1** → Edwards curve.  
-   - If **a ≠ 1** → Twisted Edwards curve.  
-   - They are **birationally equivalent** to Montgomery curves.  
-
----
-
-## Scalar Multiplication
-
-Scalar multiplication is the core cryptographic operation:  
-$$kP = \underbrace{P + P + P + ... + P}_{k \text{ times}}$$  
-
-It is efficient to compute but hard to reverse (Elliptic Curve Discrete Logarithm Problem).
-
----
-
-## Roots of Unity
-
-On elliptic curves, certain points repeat after multiple additions. These are called **points of finite order** (roots of unity).
-
----
-
-## Visualisations
-
-Elliptic curves are geometric objects:  
-
-![EC Visualisation](https://i.imgur.com/EnAcwOd.jpg)
-
-From *Serious Cryptography* (Jean-Philippe Aumasson):  
-![Elliptic Curve](img/Screenshot%202022-02-19%20at%2016.01.36.png)
-
-See this [video](https://www.youtube.com/watch?v=_JiPcvtr8sY) for examples of elliptic curve arithmetic.
-
----
-
-# Pairing
-
-Pairings connect two elliptic curve groups into a third group.  
-
-Formal definition:  
-$$e: \mathbb G_1 \times \mathbb G_2 \mapsto \mathbb G_T$$  
-
-### Properties
-1. **Non-degeneracy** → not always the identity.  
-2. **Bilinearity** → distributes across addition:  
-   $$e(aP, bQ) = e(P,Q)^{ab}$$  
-
-### Applications
-- **KZG commitments**  
-- **SNARKs**  
-- **BLS signatures**  
-
-See [Vitalik’s article](https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html).
-
----
-
-# Polynomial Introduction
-
-A **polynomial** is an expression involving variables, constants, and powers:  
-
-Example:  
-$$P(x) = 3x^{2} + 4x + 3$$
-
-**Vitalik Buterin**:  
-> "Polynomials are a single mathematical object that can contain an unbounded amount of information."
-
----
-
-## Operations
-
-Reference: [Polynomial Arithmetic](https://en.wikipedia.org/wiki/Polynomial_arithmetic)  
-
----
-
-## Roots and Division
-
-- A **root** r satisfies:  
-  $$P(r) = 0$$  
-- If r is a root, then:  
-  $$P(x) = (x-r)Q(x)$$  
-
----
-
-## Schwartz-Zippel Lemma
-
-- Two different low-degree polynomials differ **almost everywhere**.  
-- Important in ZKPs for probabilistic verification.
-
----
-
-## Lagrange Interpolation
-
-Given **n points**, there exists a **unique degree n-1 polynomial** passing through them.  
-
-![Lagrange Interpolation](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png)
-
----
-
-## Representations
-
-1. **Coefficient form**:  
-   $$f(x) = a_0 + a_1x + a_2x^2 + ...$$  
-2. **Point-value form**:  
-   $$(x_1,y_1), (x_2,y_2), ...$$  
-
----
-
-# Transformations
-
-In **zero-knowledge proofs (ZKPs)**, statements are **transformed into polynomial checks**.  
-This allows verifiers to confirm correctness securely and efficiently.
-
----
-
-# Polynomials in ZKPs
-
-Polynomials allow provers and verifiers to work with **succinct commitments**:  
-
-- A prover claims knowledge of a polynomial.  
-- The verifier checks correctness by evaluating at random points.  
-- Thanks to **Schwartz-Zippel**, cheating is almost impossible.  
-
----
-
-# References & Citations
-
-- [https://maths.extropy.io](https://maths.extropy.io)  
-- [https://bit.ly/ExtropyMathsForZK](https://bit.ly/ExtropyMathsForZK)  
-- [https://discord.gg/VSCHXqQE](https://discord.gg/VSCHXqQE)  
-- [Khan Academy: Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)  
-- [https://asecuritysite.com/encryption/finite](https://asecuritysite.com/encryption/finite)  
-- [Schwartz-Zippel Reference (arXiv)](https://arxiv.org/abs/1203.1895)  
-- [Lagrange Paper (ACM)](https://dl.acm.org/doi/pdf/10.5555/88314.88333)  
-- [Polynomial GIF](http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif)  
-- [ZKP Complexity Comparison](https://i.imgur.com/SH7BExt.png)  
-- [Elliptic Curve Video](https://www.youtube.com/watch?v=_JiPcvtr8sY)  
-- [Vitalik: Exploring EC Pairings](https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html)  
-- [Polynomial Arithmetic (Wikipedia)](https://en.wikipedia.org/wiki/Polynomial_arithmetic)  
-- [Lagrange Interpolation Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png)  
-
----
-
-# List of Internal/External Links
-
-- **Internal (local images)**:  
-  - img/mont.jpeg  
-  - img/Screenshot%202022-02-19%20at%2016.01.36.png  
-
-- **External**:  
-  - https://maths.extropy.io  
-  - https://bit.ly/ExtropyMathsForZK  
-  - https://discord.gg/VSCHXqQE  
-  - https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic  
-  - https://asecuritysite.com/encryption/finite  
-  - https://arxiv.org/abs/1203.1895  
-  - https://dl.acm.org/doi/pdf/10.5555/88314.88333  
-  - http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif  
-  - https://i.imgur.com/SH7BExt.png  
-  - https://i.imgur.com/EnAcwOd.jpg  
-  - https://www.youtube.com/watch?v=_JiPcvtr8sY  
-  - https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html  
-  - https://en.wikipedia.org/wiki/Polynomial_arithmetic  
-  - https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png  
