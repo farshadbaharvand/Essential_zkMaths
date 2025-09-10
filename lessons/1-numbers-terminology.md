@@ -2,293 +2,661 @@
 
 ## Laurence Kirk - Extropy.IO
 
-These notes available at our [website](https://maths.extropy.io) or as a single [pdf](https://bit.ly/ExtropyMathsForZK)
+These notes are available at our [website](https://maths.extropy.io) or as a single [pdf](https://bit.ly/ExtropyMathsForZK)
 
 ![QR Code](img/bit.ly_ExtropyMathsForZK.png)
 
 **Extropy.IO**
 
 Pester me via  
-Twitter : @Extropy  
-Email : info@extropy.io  
-Discord : [https://discord.gg/VSCHXqQE](https://discord.gg/VSCHXqQE)
+- **Twitter**: @Extropy  
+- **Email**: info@extropy.io  
+- **Discord**: https://discord.gg/VSCHXqQE  
 
 ---
 
-## Quote from Remco Bloemen remco@0x.org
+## Quote from Remco Bloemen (remco@0x.org)
 
-> Disclaimer: contains maths  
+> **Disclaimer: contains maths**  
 >  
-> If you don’t understand something  
+> If you don’t understand something:  
 > - Not your fault, this stuff is hard  
 > - Nobody understands it fully  
 >  
-> If you don’t understand anything  
+> If you don’t understand anything:  
 > - My fault, anything can be explained at some level  
 >  
-> If you do understand everything  
+> If you do understand everything:  
 > - Collect your Turing Award & Fields Medal  
 
-**My advice**  
-- Don't try to understand everything at once  
-- Get familiar with the terminology even if you don't know all the details  
-- 'Chunk' topics / areas  
+### Advice
+- **Don’t try to understand everything at once**  
+- **Get familiar with the terminology** even if you don’t know all the details  
+- **Chunk topics** into smaller areas  
 
 ---
 
 ## Numbers and Terminology
 
-The set of **Integers** is denoted by $$\mathbb Z$$ e.g. {⋯,−4,−3,−2,−1,0,1,2,3,4,⋯}
+### 1. Integers
+The set of **integers** is denoted by $$ \mathbb{Z} $$:  
 
-The set of **Rational Numbers** is denoted by $$\mathbb Q$$ e.g. $$\{...1,\tfrac{3}{2},2,\tfrac{22}{7}...\}$$
+$$ \{ \dots, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dots \} $$  
 
-The set of **Real Numbers** is denoted by $$\mathbb R$$ e.g. $$\{2, −4, 613, \pi, \sqrt{2}, …\}$$
+Integers include negative numbers, zero, and positive numbers.
 
-**Fields** are denoted by $$\mathbb F$$ if they are finite fields, or $$\mathbb K$$ for a field of real or complex numbers.  
-We also use $$\mathbb Z^*_p$$ to represent a finite field of integers mod prime $$p$$ with multiplicative inverses.
+---
 
-We use finite fields for cryptography because elements have “short”, exact representations and useful properties.
+### 2. Rational Numbers
+The set of **rational numbers** is denoted by $$ \mathbb{Q} $$:  
+
+$$ \left\{ 1, \frac{3}{2}, 2, \frac{22}{7}, \dots \right\} $$  
+
+Rational numbers are numbers that can be expressed as fractions of integers.
+
+---
+
+### 3. Real Numbers
+The set of **real numbers** is denoted by $$ \mathbb{R} $$:  
+
+$$ \{ 2, -4, 613, \pi, \sqrt{2}, \dots \} $$  
+
+Real numbers include both rationals and irrationals (like $$ \pi $$ and $$ \sqrt{2} $$).
+
+---
+
+### 4. Fields
+- **Fields** are denoted by $$ \mathbb{F} $$ if they are finite.  
+- For real or complex numbers, we may use $$ \mathbb{K} $$.  
+- We also use $$ \mathbb{Z}_p^* $$ to represent the set of integers modulo a prime $$ p $$ with multiplicative inverses.  
+
+**Why finite fields in cryptography?**  
+- Elements have **short, exact representations**.  
+- They have **useful algebraic properties** (inverses, closure, etc.).  
 
 ---
 
 ## Modular Arithmetic
 
-See this [introduction](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)
+See this [introduction](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic).
 
-![Modular Arithmetic](img/Screenshot%202022-02-21%20at%2009.03.23.png)
+![Modular Arithmetic Example](img/Screenshot%202022-02-21%20at%2009.03.23.png)
 
-When we write $$n \mod k$$ we mean simply the remainder when $$n$$ is divided by $$k$$.  
+### Concept
+When we write **n mod k**, it means the **remainder** when $$ n $$ is divided by $$ k $$.  
 
-**Examples**  
-- $$25 \mod 3 = 1$$  
-- $$15 \mod 4 = 3$$  
+### Examples
+- $$ 25 \mod 3 = 1 $$  
+- $$ 15 \mod 4 = 3 $$  
 
-The remainder should be positive.
+The remainder should always be **positive**.
+
 
 ---
 
+## Summary
+- $$ \mathbb{Z} $$ = integers  
+- $$ \mathbb{Q} $$ = rationals  
+- $$ \mathbb{R} $$ = reals  
+- $$ \mathbb{F} $$ = finite fields  
+- Modular arithmetic is **remainder arithmetic**, essential in cryptography.  
+
+**Key point**: Modular arithmetic and finite fields form the backbone of modern zero-knowledge proof mathematics.  
+
+
+---
+
+
 ## Group Theory
 
-Simply put, a **group** is a set of elements {a,b,c,...} plus a binary operation, here represented as •.
+Simply put, a **group** is a set of elements $$ \{a, b, c, \dots\} $$ plus a binary operation (denoted here as $$ \cdot $$).  
 
 To be considered a group, this combination needs to have certain properties:
 
 1. **Closure**  
-   For all a, b in G, the result of the operation, a • b, is also in G.  
+   For all $$ a, b \in G $$, the result of the operation $$ a \cdot b $$ is also in $$ G $$.  
+
 2. **Associativity**  
-   For all a, b and c in G, (a • b) • c = a • (b • c).  
+   For all $$ a, b, c \in G $$:  
+   $$ (a \cdot b) \cdot c = a \cdot (b \cdot c) $$  
+
 3. **Identity element**  
-   There exists an element e in G such that, for every element a in G, the equation e • a = a • e = a holds. Such an element is unique.  
+   There exists an element $$ e \in G $$ such that, for every $$ a \in G $$:  
+   $$ e \cdot a = a \cdot e = a $$  
+   Such an element is **unique**.  
+
 4. **Inverse element**  
-   For each a in G, there exists an element b in G, commonly denoted $$a^{−1}$$ (or −a, if the operation is denoted "+"), such that a • b = b • a = e.  
+   For each $$ a \in G $$, there exists an element $$ b \in G $$, commonly denoted $$ a^{-1} $$ (or $$ -a $$ if the operation is addition), such that:  
+   $$ a \cdot b = b \cdot a = e $$  
+
+---
 
 ### Subgroups
-If a subset of the elements in a group also satisfies the group properties, then that is a subgroup of the original group.
+If a subset of the elements in a group also satisfies the **group properties**, then that subset is called a **subgroup**.  
 
-### Cyclic groups and generators
-A finite group can be **cyclic**. That means it has a generator element.  
-If you start at any point and then apply the group operation with the generator as argument a certain number of times, you go around the whole group and end in the same place.
+Example: The even integers form a subgroup of the integers under addition.
+
+---
+
+### Cyclic Groups and Generators
+A **cyclic group** is a finite group that has a **generator element**.  
+
+- Starting at the generator and repeatedly applying the group operation produces every element of the group.  
+
+Example:  
+Consider the integers mod 4 under addition: $$ \{0,1,2,3\} $$  
+- Generator = 1:  
+  $$ 0 + 1 = 1, \; 1 + 1 = 2, \; 2 + 1 = 3, \; 3 + 1 = 0 \ (\text{mod } 4) $$  
+Thus, the group is cyclic.
 
 ---
 
 ## Fields
 
-A **field** is a set (e.g. Integers) together with two operations called addition and multiplication.
+A **field** is a set together with two operations: **addition** and **multiplication**.  
 
-One example of a field is the **Real Numbers** under addition and multiplication.  
-Another is a set of Integers mod a prime number with addition and multiplication. 
-
-The field operations are required to satisfy the following axioms (where a, b, c are arbitrary elements of the field $$\mathbb F$$):
-
-1. **Associativity of addition and multiplication**  
-   $$a + (b + c) = (a + b) + c \quad \text{and} \quad a \cdot (b \cdot c) = (a \cdot b) \cdot c$$  
-2. **Commutativity of addition and multiplication**  
-   $$a + b = b + a \quad \text{and} \quad a \cdot b = b \cdot a$$  
-3. **Additive and multiplicative identity**  
-   There exist two different elements 0 and 1 in $$\mathbb F$$ such that $$a + 0 = a$$ and $$a \cdot 1 = a$$.  
-4. **Additive inverses**  
-   For every a in F, there exists an element in F, denoted −a, called the additive inverse of a, such that $$a + (−a) = 0$$.  
-5. **Multiplicative inverses**  
-   For every $$a \neq 0$$ in F, there exists an element in F, denoted by $$a^{−1}$$, such that $$a \cdot a^{−1} = 1$$.  
-6. **Distributivity of multiplication over addition**  
-   $$a \cdot (b + c) = (a \cdot b) + (a \cdot c)$$  
-
-### Finite fields and generators
-
-A **finite field** is a field with a finite set of elements, such as the set of integers mod p where p is a prime.
-
-Try operations on finite fields here: [https://asecuritysite.com/encryption/finite](https://asecuritysite.com/encryption/finite)
-
-The **order** of the field is the number of elements in the field’s set.
-
-For a finite field the order must be either:  
-- prime (a prime field), or  
-- the power of a prime (an extension field).  
-
-An element can be represented as an integer greater or equal than 0 and less than the field’s order: {0, 1, ..., p-1} in a simple field.
-
-Every finite field has a **generator**. A generator is capable of generating all of the elements in the set by exponentiating the generator.
-
-So for generator g we can take $$g^0, g^1, g^2,...$$ and eventually this will give us all elements in the group.
-
-**Example**: Taking the set of integers with prime p = 5, we get the group $$\mathbb Z^*_5 = \{0,1,2,3,4\}$$.  
-- Operations are carried out modulo 5.  
-  For example, $$3 \times 4 = 12 \Rightarrow 12 \mod 5 = 2$$.  
-
-$$\mathbb Z^*_5$$ is cyclic and has two generators: 2 and 3.  
+### Examples
+- Real numbers under addition and multiplication.  
+- Integers mod a prime number under addition and multiplication.  
 
 ---
 
-# Extracted Links
+### Field Axioms  
+Let $$ a, b, c \in \mathbb{F} $$ (a field):  
 
-- [https://maths.extropy.io](https://maths.extropy.io)  
-- [https://bit.ly/ExtropyMathsForZK](https://bit.ly/ExtropyMathsForZK)  
-- [https://discord.gg/VSCHXqQE](https://discord.gg/VSCHXqQE)  
-- [https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)  
-- [https://asecuritysite.com/encryption/finite](https://asecuritysite.com/encryption/finite)  
+1. **Associativity** of addition and multiplication.  
+2. **Commutativity** of addition and multiplication.  
+3. Existence of **additive identity** (0) and **multiplicative identity** (1).  
+4. Existence of **additive inverses** (for each $$ a $$, there is $$ -a $$).  
+5. Existence of **multiplicative inverses** (for each $$ a \neq 0 $$, there is $$ a^{-1} $$).  
+6. **Distributivity**:  
+   $$ a \cdot (b + c) = (a \cdot b) + (a \cdot c) $$  
 
+---
 
+### Finite Fields and Generators
 
-----
+- **Order** = number of elements in the field.  
+- Order must be a **prime** (prime field) or **power of a prime** (extension field).  
+- Elements represented as integers $$ \{0, 1, \dots, p-1\} $$ when modulus is prime $$ p $$.  
+- Every finite field has a **generator** (a primitive element).  
 
+Example: Prime $$ p = 5 $$  
+$$ \mathbb{Z}_5^* = \{0, 1, 2, 3, 4\} $$  
 
+Operations are **mod 5**:  
+- $$ 3 \times 4 = 12 \equiv 2 \pmod{5} $$  
+
+This field is **cyclic** and has two generators: 2 and 3.  
+
+~~~~Python
+# Python example for finite field arithmetic
+p = 5
+print((3 * 4) % p)  # Output: 2
+# Check generator cycles
+for g in [2, 3]:
+    values = set()
+    for k in range(p):
+        values.add((g**k) % p)
+    print(g, values)
+~~~~
+
+---
 
 # Complexity Theory
 
-**Complexity theory** studies how much **time** or **space** is required to solve a problem, especially as the **input size** grows.  
-Some problems can be solved efficiently, while others require trying all possibilities (brute force).  
+**Complexity theory** studies the time or space requirements to solve a problem, depending on the size of the input.
+
+### Main Classes
+- **P**: Problems solvable in **polynomial time**.  
+- **NP**: Problems verifiable in **polynomial time**.  
+- **NP-Complete**: The hardest problems in NP. If one can be solved in polynomial time, all can.  
+- **NP-Hard**: At least as hard as NP-complete problems (may not even be in NP).  
 
 ---
 
-## Example: Travelling Salesman Problem (TSP)
-
-The **Travelling Salesman Problem** asks for the shortest route visiting every city exactly once.  
-
-- For **3 cities**, we can quickly test all routes.  
-- For many cities, the number of routes grows extremely fast and becomes unfeasible.  
-
-This shows why we classify problems based on **how solution time grows with input size $n$**.
+### Example: Travelling Salesman Problem
+- Given a list of cities and distances between them, find the shortest possible route visiting each city once and returning to the start.  
+- This problem is **NP-hard**.  
 
 ---
 
-## Growth of Time with Input Size
-
-- If the worst-case time grows as a **polynomial** in $n$, e.g. $$O(n^k)$$ for some $k$,  
-  the problem is in **P** (Polynomial time).  
-- Problems in **P** are considered **tractable**.  
-
-We also ask: how long does it take to **verify a solution** once found?
+### References
+- [Classic Nintendo Games Are (Computationally) Hard](https://arxiv.org/abs/1203.1895)  
+- ["Everything provable is provable in zero knowledge"](https://dl.acm.org/doi/pdf/10.5555/88314.88333)  
 
 ---
 
-## Decision Problems
-
-A **decision problem** has a **yes/no** answer.  
-For example: *Does a Hamiltonian path exist in this graph?*  
-
----
-
-## Complexity Classes
-
-### P
-- Problems solvable in **polynomial time**.  
-- Example: Sorting numbers is in P.
-
-### NP
-- Problems where a **yes-answer** can be **verified** in polynomial time.  
-- Example:  
-  - Guess a secret key for encryption.  
-  - **Verification**: Encrypt the plaintext with the guessed key and check against the ciphertext.  
-  - Verification is fast (polynomial), but **finding** the key may not be.
-
-### NP-Complete
-- Problems in NP to which **every NP problem can be reduced** in polynomial time.  
-- Intuition: If we can solve one NP-Complete problem quickly, we can solve all NP problems quickly.  
-- Formal definition:  
-  - For problems $X$ (NP-complete) and $Y$ (NP),  
-  - There exists a polynomial-time function $$f$$ such that $$y \in Y \iff f(y) \in X$$.
-
-### NP-hard
-- At least as hard as NP-complete problems.  
-- They don’t need to be in NP and don’t need to be decision problems.  
-- If one NP-hard problem has a polynomial solution, **all NP problems** do.  
+### Interactive Proofs (IP)
+- **Interactive Proofs** are protocols where a prover and verifier interact to establish truth.  
+- Reference: [Videos by Alessandro Chiesa](https://www.youtube.com/watch?v=pMzpQ82Q88Q)  
 
 ---
 
-## Fun Fact: Video Games and Complexity
 
-Even **video games** can be **NP-complete** or **NP-hard**!  
+# Complexity, Elliptic Curves, and Polynomials in Cryptography
 
-Examples:  
-- **Tetris, Super Mario Bros., Pokémon, Candy Crush Saga**.  
-- Reference: ["Classic Nintendo Games Are (Computationally) Hard"](https://arxiv.org/abs/1203.1895).  
+This guide introduces **Big O notation**, **elliptic curves**, **pairings**, and **polynomials** with a focus on their use in cryptography and zero-knowledge proofs (ZKPs).  
 
----
-
-## Zero-Knowledge Proofs (ZKP) Connection
-
-From ["Everything provable is provable in zero knowledge"](https://dl.acm.org/doi/pdf/10.5555/88314.88333):
-
-- Assuming secure probabilistic encryption:  
-  - Every language with an interactive proof has a **zero-knowledge interactive proof**.  
-- Extends result of Goldreich, Micali, Wigderson:  
-  - **All NP problems admit zero-knowledge proofs** under the same assumption.  
-
----
-
-## Interactive Proofs (IP)
-
-- **Interactive Proofs (IP)** are central to **zero-knowledge proofs**.  
-- Unlike static proofs, they involve **interaction between prover and verifier**.  
-- Widely used in **modern zk systems**.  
-
-📺 [Video lecture by Alessandro Chiesa](https://www.youtube.com/watch?v=pMzpQ82Q88Q)
+It is designed to be **beginner-friendly**, step-by-step, and full of examples, equations, and references.
 
 ---
 
 # Big O Notation
 
-**Big O notation** describes the **complexity** of an algorithm using algebraic terms.  
+Big O describes the **complexity** of code using algebraic terms. It tells us how the runtime or memory grows as input size increases.  
 
-- It shows how **time or space** grows with input size $n$ in the **worst case**.  
-- Example:  
-  - $$O(n^2)$$ means time grows roughly proportional to $$n^2$$.  
-  - If input doubles, runtime grows by about 4 times.  
+Example:  
+- **$O(1)$** → Constant time (no matter input size).  
+- **$O(n)$** → Linear time.  
+- **$O(n^2)$** → Quadratic time. Runtime grows proportionally to the square of the input size.  
 
----
+Equation example:  
+$$T(n) = 5n^2 + 3n + 2 \in O(n^2)$$
 
-## Common Big O Complexities
+Visualisation:  
 
-| Complexity | Name             | Example Task                                |
-|------------|------------------|---------------------------------------------|
-| $$O(1)$$   | Constant         | Array lookup by index                       |
-| $$O(\log n)$$ | Logarithmic   | Binary search                               |
-| $$O(n)$$   | Linear           | Scanning a list                             |
-| $$O(n \log n)$$ | Log-linear  | Merge sort, Quick sort (average case)       |
-| $$O(n^2)$$ | Quadratic        | Checking all pairs in a list                |
-| $$O(2^n)$$ | Exponential      | Brute force solving of SAT                  |
-| $$O(n!)$$  | Factorial        | Travelling Salesman (brute force)           |
+![Big O](http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif)
+
+Comparison of complexities in ZK proofs:  
+![ZKP Complexity Comparison](https://i.imgur.com/SH7BExt.png)
 
 ---
 
-## Visual Example
+# Elliptic Curves
 
-Consider $$O(n^2)$$:  
+Elliptic curves are defined by an equation:  
+$$y^{2} = x^{3} + ax + b$$  
 
-- If $$n = 10$$, steps ≈ $$100$$.  
-- If $$n = 100$$, steps ≈ $$10,000$$.  
+They form a **group** under a special addition rule. This makes them useful in cryptography.
 
-This shows why **polynomial vs. exponential** makes a big difference.
+## Families of Curves
+
+1. **Montgomery Curves**  
+   Equation:  
+   $$y^{2} = x^{3} + 486662x^{2} + x$$  
+   - Example: **Curve25519**  
+   - Used in **ECDH (Diffie–Hellman)**.  
+   - BN254/BN128 used in **Ethereum zkSNARKs**.  
+   - BLS12-381 used in **ZCash**.  
+
+   ![Montgomery Curve](img/mont.jpeg)
+
+2. **Edwards Curves**  
+   Equation:  
+   $$ax^{2}+y^{2}=1+dx^{2}y^{2}$$  
+   - If **a = 1** → Edwards curve.  
+   - If **a ≠ 1** → Twisted Edwards curve.  
+   - They are **birationally equivalent** to Montgomery curves.  
 
 ---
 
-# Key Takeaways
+## Scalar Multiplication
 
-1. **P** = problems solvable in polynomial time.  
-2. **NP** = problems where solutions can be verified in polynomial time.  
-3. **NP-Complete** = hardest problems in NP; solve one, solve them all.  
-4. **NP-hard** = at least as hard as NP-complete, may go beyond decision problems.  
-5. **Interactive Proofs (IP)** are essential for **Zero-Knowledge Proofs**.  
-6. **Big O notation** is a mathematical tool to measure and compare complexities.  
+Scalar multiplication is the core cryptographic operation:  
+$$kP = \underbrace{P + P + P + ... + P}_{k \text{ times}}$$  
+
+It is efficient to compute but hard to reverse (Elliptic Curve Discrete Logarithm Problem).
 
 ---
+
+## Roots of Unity
+
+On elliptic curves, certain points repeat after multiple additions. These are called **points of finite order** (roots of unity).
+
+---
+
+## Visualisations
+
+Elliptic curves are geometric objects:  
+
+![EC Visualisation](https://i.imgur.com/EnAcwOd.jpg)
+
+From *Serious Cryptography* (Jean-Philippe Aumasson):  
+![Elliptic Curve](img/Screenshot%202022-02-19%20at%2016.01.36.png)
+
+See this [video](https://www.youtube.com/watch?v=_JiPcvtr8sY) for examples of elliptic curve arithmetic.
+
+---
+
+# Pairing
+
+Pairings connect two elliptic curve groups into a third group.  
+
+Formal definition:  
+$$e: \mathbb G_1 \times \mathbb G_2 \mapsto \mathbb G_T$$  
+
+### Properties
+1. **Non-degeneracy** → not always the identity.  
+2. **Bilinearity** → distributes across addition:  
+   $$e(aP, bQ) = e(P,Q)^{ab}$$  
+
+### Applications
+- **KZG commitments**  
+- **SNARKs**  
+- **BLS signatures**  
+
+See [Vitalik’s article](https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html).
+
+---
+
+# Polynomial Introduction
+
+A **polynomial** is an expression involving variables, constants, and powers:  
+
+Example:  
+$$P(x) = 3x^{2} + 4x + 3$$
+
+**Vitalik Buterin**:  
+> "Polynomials are a single mathematical object that can contain an unbounded amount of information."
+
+---
+
+## Operations
+
+Reference: [Polynomial Arithmetic](https://en.wikipedia.org/wiki/Polynomial_arithmetic)  
+
+---
+
+## Roots and Division
+
+- A **root** r satisfies:  
+  $$P(r) = 0$$  
+- If r is a root, then:  
+  $$P(x) = (x-r)Q(x)$$  
+
+---
+
+## Schwartz-Zippel Lemma
+
+- Two different low-degree polynomials differ **almost everywhere**.  
+- Important in ZKPs for probabilistic verification.
+
+---
+
+## Lagrange Interpolation
+
+Given **n points**, there exists a **unique degree n-1 polynomial** passing through them.  
+
+![Lagrange Interpolation](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png)
+
+---
+
+## Representations
+
+1. **Coefficient form**:  
+   $$f(x) = a_0 + a_1x + a_2x^2 + ...$$  
+2. **Point-value form**:  
+   $$(x_1,y_1), (x_2,y_2), ...$$  
+
+---
+
+# Transformations
+
+In **zero-knowledge proofs (ZKPs)**, statements are **transformed into polynomial checks**.  
+This allows verifiers to confirm correctness securely and efficiently.
+
+---
+
+# Polynomials in ZKPs
+
+Polynomials allow provers and verifiers to work with **succinct commitments**:  
+
+- A prover claims knowledge of a polynomial.  
+- The verifier checks correctness by evaluating at random points.  
+- Thanks to **Schwartz-Zippel**, cheating is almost impossible.  
+
+---
+
+# References & Citations
+
+- [https://maths.extropy.io](https://maths.extropy.io)  
+- [https://bit.ly/ExtropyMathsForZK](https://bit.ly/ExtropyMathsForZK)  
+- [https://discord.gg/VSCHXqQE](https://discord.gg/VSCHXqQE)  
+- [Khan Academy: Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)  
+- [https://asecuritysite.com/encryption/finite](https://asecuritysite.com/encryption/finite)  
+- [Schwartz-Zippel Reference (arXiv)](https://arxiv.org/abs/1203.1895)  
+- [Lagrange Paper (ACM)](https://dl.acm.org/doi/pdf/10.5555/88314.88333)  
+- [Polynomial GIF](http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif)  
+- [ZKP Complexity Comparison](https://i.imgur.com/SH7BExt.png)  
+- [Elliptic Curve Video](https://www.youtube.com/watch?v=_JiPcvtr8sY)  
+- [Vitalik: Exploring EC Pairings](https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html)  
+- [Polynomial Arithmetic (Wikipedia)](https://en.wikipedia.org/wiki/Polynomial_arithmetic)  
+- [Lagrange Interpolation Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png)  
+
+---
+
+# List of Internal/External Links
+
+- **Internal (local images)**:  
+  - img/mont.jpeg  
+  - img/Screenshot%202022-02-19%20at%2016.01.36.png  
+
+- **External**:  
+  - https://maths.extropy.io  
+  - https://bit.ly/ExtropyMathsForZK  
+  - https://discord.gg/VSCHXqQE  
+  - https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic  
+  - https://asecuritysite.com/encryption/finite  
+  - https://arxiv.org/abs/1203.1895  
+  - https://dl.acm.org/doi/pdf/10.5555/88314.88333  
+  - http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif  
+  - https://i.imgur.com/SH7BExt.png  
+  - https://i.imgur.com/EnAcwOd.jpg  
+  - https://www.youtube.com/watch?v=_JiPcvtr8sY  
+  - https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html  
+  - https://en.wikipedia.org/wiki/Polynomial_arithmetic  
+  - https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png  
+# Complexity, Elliptic Curves, and Polynomials in Cryptography
+
+This guide introduces **Big O notation**, **elliptic curves**, **pairings**, and **polynomials** with a focus on their use in cryptography and zero-knowledge proofs (ZKPs).  
+
+It is designed to be **beginner-friendly**, step-by-step, and full of examples, equations, and references.
+
+---
+
+# Big O Notation
+
+Big O describes the **complexity** of code using algebraic terms. It tells us how the runtime or memory grows as input size increases.  
+
+Example:  
+- **$O(1)$** → Constant time (no matter input size).  
+- **$O(n)$** → Linear time.  
+- **$O(n^2)$** → Quadratic time. Runtime grows proportionally to the square of the input size.  
+
+Equation example:  
+$$T(n) = 5n^2 + 3n + 2 \in O(n^2)$$
+
+Visualisation:  
+
+![Big O](http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif)
+
+Comparison of complexities in ZK proofs:  
+![ZKP Complexity Comparison](https://i.imgur.com/SH7BExt.png)
+
+---
+
+# Elliptic Curves
+
+Elliptic curves are defined by an equation:  
+$$y^{2} = x^{3} + ax + b$$  
+
+They form a **group** under a special addition rule. This makes them useful in cryptography.
+
+## Families of Curves
+
+1. **Montgomery Curves**  
+   Equation:  
+   $$y^{2} = x^{3} + 486662x^{2} + x$$  
+   - Example: **Curve25519**  
+   - Used in **ECDH (Diffie–Hellman)**.  
+   - BN254/BN128 used in **Ethereum zkSNARKs**.  
+   - BLS12-381 used in **ZCash**.  
+
+   ![Montgomery Curve](img/mont.jpeg)
+
+2. **Edwards Curves**  
+   Equation:  
+   $$ax^{2}+y^{2}=1+dx^{2}y^{2}$$  
+   - If **a = 1** → Edwards curve.  
+   - If **a ≠ 1** → Twisted Edwards curve.  
+   - They are **birationally equivalent** to Montgomery curves.  
+
+---
+
+## Scalar Multiplication
+
+Scalar multiplication is the core cryptographic operation:  
+$$kP = \underbrace{P + P + P + ... + P}_{k \text{ times}}$$  
+
+It is efficient to compute but hard to reverse (Elliptic Curve Discrete Logarithm Problem).
+
+---
+
+## Roots of Unity
+
+On elliptic curves, certain points repeat after multiple additions. These are called **points of finite order** (roots of unity).
+
+---
+
+## Visualisations
+
+Elliptic curves are geometric objects:  
+
+![EC Visualisation](https://i.imgur.com/EnAcwOd.jpg)
+
+From *Serious Cryptography* (Jean-Philippe Aumasson):  
+![Elliptic Curve](img/Screenshot%202022-02-19%20at%2016.01.36.png)
+
+See this [video](https://www.youtube.com/watch?v=_JiPcvtr8sY) for examples of elliptic curve arithmetic.
+
+---
+
+# Pairing
+
+Pairings connect two elliptic curve groups into a third group.  
+
+Formal definition:  
+$$e: \mathbb G_1 \times \mathbb G_2 \mapsto \mathbb G_T$$  
+
+### Properties
+1. **Non-degeneracy** → not always the identity.  
+2. **Bilinearity** → distributes across addition:  
+   $$e(aP, bQ) = e(P,Q)^{ab}$$  
+
+### Applications
+- **KZG commitments**  
+- **SNARKs**  
+- **BLS signatures**  
+
+See [Vitalik’s article](https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html).
+
+---
+
+# Polynomial Introduction
+
+A **polynomial** is an expression involving variables, constants, and powers:  
+
+Example:  
+$$P(x) = 3x^{2} + 4x + 3$$
+
+**Vitalik Buterin**:  
+> "Polynomials are a single mathematical object that can contain an unbounded amount of information."
+
+---
+
+## Operations
+
+Reference: [Polynomial Arithmetic](https://en.wikipedia.org/wiki/Polynomial_arithmetic)  
+
+---
+
+## Roots and Division
+
+- A **root** r satisfies:  
+  $$P(r) = 0$$  
+- If r is a root, then:  
+  $$P(x) = (x-r)Q(x)$$  
+
+---
+
+## Schwartz-Zippel Lemma
+
+- Two different low-degree polynomials differ **almost everywhere**.  
+- Important in ZKPs for probabilistic verification.
+
+---
+
+## Lagrange Interpolation
+
+Given **n points**, there exists a **unique degree n-1 polynomial** passing through them.  
+
+![Lagrange Interpolation](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png)
+
+---
+
+## Representations
+
+1. **Coefficient form**:  
+   $$f(x) = a_0 + a_1x + a_2x^2 + ...$$  
+2. **Point-value form**:  
+   $$(x_1,y_1), (x_2,y_2), ...$$  
+
+---
+
+# Transformations
+
+In **zero-knowledge proofs (ZKPs)**, statements are **transformed into polynomial checks**.  
+This allows verifiers to confirm correctness securely and efficiently.
+
+---
+
+# Polynomials in ZKPs
+
+Polynomials allow provers and verifiers to work with **succinct commitments**:  
+
+- A prover claims knowledge of a polynomial.  
+- The verifier checks correctness by evaluating at random points.  
+- Thanks to **Schwartz-Zippel**, cheating is almost impossible.  
+
+---
+
+# References & Citations
+
+- [https://maths.extropy.io](https://maths.extropy.io)  
+- [https://bit.ly/ExtropyMathsForZK](https://bit.ly/ExtropyMathsForZK)  
+- [https://discord.gg/VSCHXqQE](https://discord.gg/VSCHXqQE)  
+- [Khan Academy: Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)  
+- [https://asecuritysite.com/encryption/finite](https://asecuritysite.com/encryption/finite)  
+- [Schwartz-Zippel Reference (arXiv)](https://arxiv.org/abs/1203.1895)  
+- [Lagrange Paper (ACM)](https://dl.acm.org/doi/pdf/10.5555/88314.88333)  
+- [Polynomial GIF](http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif)  
+- [ZKP Complexity Comparison](https://i.imgur.com/SH7BExt.png)  
+- [Elliptic Curve Video](https://www.youtube.com/watch?v=_JiPcvtr8sY)  
+- [Vitalik: Exploring EC Pairings](https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html)  
+- [Polynomial Arithmetic (Wikipedia)](https://en.wikipedia.org/wiki/Polynomial_arithmetic)  
+- [Lagrange Interpolation Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png)  
+
+---
+
+# List of Internal/External Links
+
+- **Internal (local images)**:  
+  - img/mont.jpeg  
+  - img/Screenshot%202022-02-19%20at%2016.01.36.png  
+
+- **External**:  
+  - https://maths.extropy.io  
+  - https://bit.ly/ExtropyMathsForZK  
+  - https://discord.gg/VSCHXqQE  
+  - https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic  
+  - https://asecuritysite.com/encryption/finite  
+  - https://arxiv.org/abs/1203.1895  
+  - https://dl.acm.org/doi/pdf/10.5555/88314.88333  
+  - http://science.slc.edu/jmarshall/courses/2002/spring/cs50/BigO/polynomials.gif  
+  - https://i.imgur.com/SH7BExt.png  
+  - https://i.imgur.com/EnAcwOd.jpg  
+  - https://www.youtube.com/watch?v=_JiPcvtr8sY  
+  - https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html  
+  - https://en.wikipedia.org/wiki/Polynomial_arithmetic  
+  - https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png  
