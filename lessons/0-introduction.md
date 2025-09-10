@@ -48,7 +48,7 @@ Integers include negative numbers, zero, and positive numbers.
 ---
 
 ### 2. Rational Numbers
-The set of **rational numbers** is denoted by $$ \mathbb{Q} $$:  
+The set of **rational numbers** is denoted by $$\mathbb{Q}$$:  
 
 $$ \left\{ 1, \frac{3}{2}, 2, \frac{22}{7}, \dots \right\} $$  
 
@@ -57,18 +57,18 @@ Rational numbers are numbers that can be expressed as fractions of integers.
 ---
 
 ### 3. Real Numbers
-The set of **real numbers** is denoted by $$ \mathbb{R} $$:  
+The set of **real numbers** is denoted by $$\mathbb{R}$$:  
 
 $$ \{ 2, -4, 613, \pi, \sqrt{2}, \dots \} $$  
 
-Real numbers include both rationals and irrationals (like $$ \pi $$ and $$ \sqrt{2} $$).
+Real numbers include both rationals and irrationals (like $$\pi$$ and $$\sqrt{2}$$).
 
 ---
 
 ### 4. Fields
-- **Fields** are denoted by $$ \mathbb{F} $$ if they are finite.  
-- For real or complex numbers, we may use $$ \mathbb{K} $$.  
-- We also use $$ \mathbb{Z}_p^* $$ to represent the set of integers modulo a prime $$ p $$ with multiplicative inverses.  
+- **Fields** are denoted by $$\mathbb{F}$$ if they are finite.  
+- For real or complex numbers, we may use $$\mathbb{K}$$.  
+- We also use $$\mathbb{Z}_p^*$$ to represent the set of integers modulo a prime $$p$$ with multiplicative inverses.  
 
 **Why finite fields in cryptography?**  
 - Elements have **short, exact representations**.  
@@ -83,7 +83,7 @@ See this [introduction](https://www.khanacademy.org/computing/computer-science/c
 ![Modular Arithmetic Example](img/Screenshot%202022-02-21%20at%2009.03.23.png)
 
 ### Concept
-When we write **n mod k**, it means the **remainder** when $$ n $$ is divided by $$ k $$.  
+When we write **n mod k**, it means the **remainder** when $$n$$ is divided by $$k$$.  
 
 ### Examples
 - $$ 25 \mod 3 = 1 $$  
