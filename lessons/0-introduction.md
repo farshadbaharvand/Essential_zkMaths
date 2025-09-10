@@ -41,7 +41,7 @@ Pester me via
 ### 1. Integers
 The set of **integers** is denoted by $$\mathbb{Z}$$:  
 
-$$ \{ \dots, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dots \} $$  
+$$\{ \dots, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dots \} $$  
 
 Integers include negative numbers, zero, and positive numbers.
 
@@ -50,7 +50,7 @@ Integers include negative numbers, zero, and positive numbers.
 ### 2. Rational Numbers
 The set of **rational numbers** is denoted by $$\mathbb{Q}$$:  
 
-$$ \{ 1, \frac{3}{2}, 2, \frac{22}{7}, \dots \} $$  
+$$\{ 1, \frac{3}{2}, 2, \frac{22}{7}, \dots \} $$  
 
 Rational numbers are numbers that can be expressed as fractions of integers.
 
@@ -59,7 +59,7 @@ Rational numbers are numbers that can be expressed as fractions of integers.
 ### 3. Real Numbers
 The set of **real numbers** is denoted by $$\mathbb{R}$$:  
 
-$$ \{ 2, -4, 613, \pi, \sqrt{2}, \dots \} $$  
+$$\{ 2, -4, 613, \pi, \sqrt{2}, \dots \} $$  
 
 Real numbers include both rationals and irrationals (like $$\pi$$ and $$\sqrt{2}$$).
 
@@ -114,20 +114,20 @@ Simply put, a **group** is a set of elements $$\{a, b, c, \dots\}$$ plus a binar
 To be considered a group, this combination needs to have certain properties:
 
 1. **Closure**  
-   For all $$a, b \in G $$, the result of the operation $$a \cdot b $$is also in $$ G $$.  
+   For all $$a, b \in G $$, the result of the operation $$a \cdot b$$ is also in $$G$$.  
 
 2. **Associativity**  
-   For all $$ a, b, c \in G $$:  
-   $$ (a \cdot b) \cdot c = a \cdot (b \cdot c) $$  
+   For all $$a, b, c \in G $$:  
+   $$(a \cdot b) \cdot c = a \cdot (b \cdot c) $$  
 
 3. **Identity element**  
-   There exists an element $$ e \in G $$ such that, for every $$ a \in G $$:  
-   $$ e \cdot a = a \cdot e = a $$  
+   There exists an element $$e \in G $$ such that, for every $$a \in G $$:  
+   $$e \cdot a = a \cdot e = a $$  
    Such an element is **unique**.  
 
 4. **Inverse element**  
-   For each $$ a \in G $$, there exists an element $$ b \in G $$, commonly denoted $$ a^{-1} $$ (or $$ -a $$ if the operation is addition), such that:  
-   $$ a \cdot b = b \cdot a = e $$  
+   For each $$a \in G $$, there exists an element $$b \in G $$, commonly denoted $$a^{-1} $$(or $$-a $$ if the operation is addition), such that:  
+   $$a \cdot b = b \cdot a = e $$  
 
 ---
 
@@ -144,9 +144,9 @@ A **cyclic group** is a finite group that has a **generator element**.
 - Starting at the generator and repeatedly applying the group operation produces every element of the group.  
 
 Example:  
-Consider the integers mod 4 under addition: $$ \{0,1,2,3\} $$  
+Consider the integers mod 4 under addition: $$\{0,1,2,3\} $$  
 - Generator = 1:  
-  $$ 0 + 1 = 1, \; 1 + 1 = 2, \; 2 + 1 = 3, \; 3 + 1 = 0 \ (\text{mod } 4) $$  
+  $$0 + 1 = 1, \; 1 + 1 = 2, \; 2 + 1 = 3, \; 3 + 1 = 0 \ (\text{mod } 4) $$  
 Thus, the group is cyclic.
 
 ---
@@ -162,15 +162,15 @@ A **field** is a set together with two operations: **addition** and **multiplica
 ---
 
 ### Field Axioms  
-Let $$ a, b, c \in \mathbb{F} $$ (a field):  
+Let $$a, b, c \in \mathbb{F} $$ (a field):  
 
 1. **Associativity** of addition and multiplication.  
 2. **Commutativity** of addition and multiplication.  
 3. Existence of **additive identity** (0) and **multiplicative identity** (1).  
-4. Existence of **additive inverses** (for each $$ a $$, there is $$ -a $$).  
-5. Existence of **multiplicative inverses** (for each $$ a \neq 0 $$, there is $$ a^{-1} $$).  
+4. Existence of **additive inverses** (for each $$a $$, there is $$-a $$).  
+5. Existence of **multiplicative inverses** (for each $$a \neq 0 $$, there is $$a^{-1} $$).  
 6. **Distributivity**:  
-   $$ a \cdot (b + c) = (a \cdot b) + (a \cdot c) $$  
+   $$a \cdot (b + c) = (a \cdot b) + (a \cdot c) $$  
 
 ---
 
@@ -178,14 +178,14 @@ Let $$ a, b, c \in \mathbb{F} $$ (a field):
 
 - **Order** = number of elements in the field.  
 - Order must be a **prime** (prime field) or **power of a prime** (extension field).  
-- Elements represented as integers $$ \{0, 1, \dots, p-1\} $$ when modulus is prime $$ p $$.  
+- Elements represented as integers $$\{0, 1, \dots, p-1\} $$ when modulus is prime $$p $$.  
 - Every finite field has a **generator** (a primitive element).  
 
-Example: Prime $$ p = 5 $$  
-$$ \mathbb{Z}_5^* = \{0, 1, 2, 3, 4\} $$  
+Example: Prime $$p = 5 $$  
+$$\mathbb{Z}_5^* = \{0, 1, 2, 3, 4\} $$  
 
 Operations are **mod 5**:  
-- $$ 3 \times 4 = 12 \equiv 2 \pmod{5} $$  
+- $$3 \times 4 = 12 \equiv 2 \pmod{5} $$  
 
 This field is **cyclic** and has two generators: 2 and 3.  
 
