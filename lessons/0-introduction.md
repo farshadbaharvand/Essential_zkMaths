@@ -51,26 +51,138 @@ A **field** $(F, +, \cdot)$ has addition and multiplication with the following a
 1. **Associativity:** $a + (b + c) = (a + b) + c$, $a \cdot (b \cdot c) = (a \cdot b) \cdot c$  
 2. **Commutativity:** $a + b = b + a$, $a \cdot b = b \cdot a$  
 3. **Identities:** $0$ for addition, $1$ for multiplication, $a + 0 = a$, $a \cdot 1 = a$ 
-4. **Additive Inverses:** For every \(a \in F\), there exists an element in \(F\), denoted **-a**, called the **additive inverse** of \(a\), such that: \[a + (-a) = 0\]
-5. **Multiplicative Inverses:** For every \(a \neq 0 \in F\), there exists an element in \(F\), denoted **a⁻¹**, called the **multiplicative inverse** of \(a\), such that:\[a \cdot a^{-1} = 1\]
+4. **Additive Inverses:** For every \(a \in F\), there exists an element in \(F\), denoted **-a**, called the **additive inverse** of \(a\), such that: \(a + (-a) = 0\)
+5. **Multiplicative Inverses:** For every \(a \neq 0 \in F\), there exists an element in \(F\), denoted **a⁻¹**, called the **multiplicative inverse** of \(a\), such that:\(a \cdot a^{-1} = 1\)
 6. **Distributivity:** $a \cdot (b + c) = a \cdot b + a \cdot c$
 
 #### Finite Fields and Generators
-- A **finite field** $\mathbb{F}_p$ has $p$ elements: $\{0,1,...,p-1\}$  
+- A **finite field** $\mathbb{Z}_p$ has $p$ elements: $\{0,1,...,p-1\}$  
 - The **order** of the field is the number of elements  
 - Every finite field has a **generator** $g$ such that:
 
 $$
-\{g^0, g^1, g^2, ..., g^{p-1}\} = \mathbb{F}_p^*
+\{g^0, g^1, g^2, ..., g^{p-1}\} = \mathbb{Z}_p^*
 $$
 
-Example: $\mathbb{F}_5 = \{0,1,2,3,4\}$, generator $2$:  
 
-$$
-2^1 = 2, \quad 2^2 = 4, \quad 2^3 = 3, \quad 2^4 = 1
-$$
+Example: The Group $\mathbb{Z}_5^*$
+
+In the group $\mathbb{Z}_5^*$, operations are carried out **modulo 5**.  
+For example, we don't have \(3 \times 4 = 12\); instead, we have:
+
+\[
+3 \times 4 \equiv 12 \equiv 2 \pmod{5}
+\]
+
+
+The group $\mathbb{Z}_5^*$ is **cyclic** and has two generators: \(2\) and \(3\).
+
+- Powers of 2 modulo 5:
+
+\[
+2^1 \equiv 2, \quad 2^2 \equiv 4, \quad 2^3 \equiv 3, \quad 2^4 \equiv 1 \pmod{5}
+\]
+
+- Powers of 3 modulo 5:
+
+\[
+3^1 \equiv 3, \quad 3^2 \equiv 4, \quad 3^3 \equiv 2, \quad 3^4 \equiv 1 \pmod{5}
+\]
+
 
 ### Complexity Theory
+
+# Complexity Theory
+
+Complexity theory studies the **time or space required to solve a problem**, particularly in terms of the size of the input.  
+Problems can be classified based on how long it takes to find a solution:  
+- Some problems have algorithms that find solutions in reasonable time.  
+- Others may require **brute force**, trying all potential solutions until one works.  
+
+**Example:** The Travelling Salesman Problem (TSP) seeks the shortest route visiting each city exactly once.  
+- With 3 cities, all routes can be checked quickly.  
+- With many cities, brute force becomes infeasible.
+
+---
+
+### Classifying Problems by Input Size
+
+Let the input size be \(n\).  
+- If the **worst-case time** grows as a polynomial of \(n\) (roughly proportional to \(n^k\) for some \(k\)), the problem is in class **P (Polynomial)**.  
+- P problems are considered **tractable**.
+
+We also care about **how long it takes to verify a solution** once given.  
+
+**Decision Problem:** A problem with a **yes/no** answer.
+
+![Screenshot](img/Screenshot%202022-03-01%20at%2011.04.49.png)
+
+---
+
+## P
+
+**P** is the class of all **decision problems** solvable in polynomial time.  
+- Given an instance, the answer **yes/no** can be determined in polynomial time.
+
+## NP
+
+**NP** is the class of decision problems for which **yes-instances have proofs verifiable in polynomial time**.  
+- Solution may be hard to find, but checking a candidate solution is efficient.  
+- Example: Recovering a secret key given a known plaintext.  
+  - Checking a candidate key is polynomial-time (encrypt plaintext → compare with ciphertext).  
+  - Finding the key may not be polynomial-time.
+
+---
+
+## NP-Complete
+
+**NP-Complete** problems are:  
+- In NP.  
+- Any other NP problem can be **reduced** to them in polynomial time.  
+
+Formally: Y is reducible to X if there exists a polynomial-time algorithm \(f\) such that for instances \(y\) of Y, \(x = f(y)\) is an instance of X, and:
+
+\[
+\text{Answer to } y = \text{yes} \iff \text{Answer to } f(y) = \text{yes}
+\]
+
+Intuition: If you can solve X quickly, you can solve all NP problems quickly.
+
+---
+
+## NP-Hard
+
+- Problems **at least as hard as NP-Complete problems**.  
+- NP-Hard problems **do not need to be in NP** or decision problems.  
+- Formally: X is NP-Hard if some NP-Complete problem Y can be reduced to X in polynomial time.  
+
+> Implication: If any NP-Hard problem has a polynomial-time solution, then **all NP problems** do.
+
+**Example:** Certain video games (Tetris, Super Mario Bros., Pokémon, Candy Crush Saga) have decision problems that are NP-Complete or NP-Hard.  
+- Article: ["Classic Nintendo Games Are (Computationally) Hard"](https://arxiv.org/abs/1203.1895)
+
+---
+
+## Interactive Proofs (IP)
+
+- Central to **zero-knowledge proofs (ZKPs)**.  
+- Interactive proofs differ from traditional static proofs.  
+- Related to complexity classes P, NP, NP-Complete.  
+
+**Video:** [Interactive Proofs by Alessandro Chiesa](https://www.youtube.com/watch?v=pMzpQ82Q88Q)
+
+**Reference:** *Everything provable is provable in zero knowledge*  
+- ACM: https://dl.acm.org/doi/pdf/10.5555/88314.88333  
+- Summary: Every language with an interactive proof admits a **zero-knowledge interactive proof**, under secure probabilistic encryption assumptions.
+
+
+
+
+
+
+
+
+
 Complexity theory studies **time and space requirements** to solve computational problems.  
 
 - **Decision problem:** answers are yes/no  
