@@ -175,6 +175,9 @@ This guide provides a **step-by-step, beginner-friendly explanation** of modular
 **Definition:**  
 Modular arithmetic deals with integers and a **modulus**, denoted as `n mod k`, meaning the **remainder** when `n` is divided by `k`.
 
+![Modular Arithmetic](img/Screenshot%202022-02-21%20at%2009.03.23.png)
+
+
 **Examples:**
 
 $$
@@ -334,6 +337,10 @@ We classify problems according to how the time required to solve them scales wit
 - For 20 cities, brute-forcing becomes computationally infeasible.
 
 ---
+
+
+![complex theory](img/Screenshot%202022-03-01%20at%2011.04.49.png)
+
 
 ## 2. Decision Problems
 
@@ -521,6 +528,8 @@ $$
 
 ### 3.1 Montgomery Curves
 
+![Montgomery](img/mont.jpeg)
+
 Montgomery curves have the form:
 
 $$
@@ -695,7 +704,9 @@ $$
 
 Scalar multiplication can be visualized geometrically:
 
-<img src="https://i.imgur.com/EnAcwOd.jpg" alt="Elliptic Curve Scalar Multiplication" style="object-fit: scale-down">
+
+
+![Visualizations](img/Screenshot%202022-02-19%20at%2016.01.36.png)
 
 - **Step 1:** Start with point \(P\)
 - **Step 2:** Add \(P\) to itself to get \(2P\) (point doubling)
@@ -709,7 +720,7 @@ These geometric visualizations help understand why the group structure holds.
 ## 4. References and Further Reading
 
 - **Book**: Serious Cryptography, Jean-Philippe Aumasson
-<img src="img/Screenshot 2022-02-19 at 16.01.36.png" alt="Book Screenshot" style="object-fit: scale-down">
+
 
 - **Video Tutorial**: [Elliptic Curve Arithmetic](https://www.youtube.com/watch?v=_JiPcvtr8sY)
 
@@ -944,7 +955,9 @@ This lemma provides a probabilistic guarantee about polynomials:
 
 Example visualization:
 
-<img src="img/Screenshot 2022-03-01 at 12.25.07.png" alt="" style="object-fit: scale-down">
+
+
+![Schwartz-Zippel Lemma](img/Screenshot%202022-03-01%20at%2012.25.07.png)
 
 - If $f(x) = g(x)$ for all $x$, polynomials are equal.
 - If $f(x) \neq g(x)$ for almost all $x$, they are different.
@@ -1194,7 +1207,8 @@ There are several types of PCS, differing in efficiency and cryptographic assump
    - Proof involves **Merkle paths**.
    - Simple and post-quantum secure, but proof size grows with log(n).
 
-<img src="img/Screenshot 2024-08-21 at 08.24.43.png" alt="Types of PCS" style="width: 500px; object-fit: fill">
+
+![Polynomial Commitment Schemes](img/Screenshot%202024-08-21%20at%2008.24.43.png)
 
 ---
 
@@ -1217,10 +1231,13 @@ There are several types of PCS, differing in efficiency and cryptographic assump
 - **Bulletproofs / Inner Product Arguments**: Proof size grows logarithmically.
 - **Merkle Tree Commitments**: Proofs consist of Merkle paths to leaves representing evaluations.
 
-<img src="img/Screenshot 2023-08-03 at 04.36.25.png" alt="KZG Illustration" style="width: 500px; object-fit: fill">
-<img src="img/Screenshot 2023-08-03 at 04.49.51.png" alt="Bulletproofs Illustration" style="width: 500px; object-fit: fill">
-<img src="img/Screenshot 2023-08-03 at 04.53.35.png" alt="Inner Product Argument Illustration" style="width: 500px; object-fit: fill">
-<img src="img/Screenshot 2023-08-03 at 04.55.45.png" alt="Merkle Tree Illustration" style="width: 500px; object-fit: fill">
+
+![KZG Illustration](img/Screenshot%202023-08-03%20at%2004.36.25.png)
+![Bulletproofs Illustration](img/Screenshot%202023-08-03%20at%2004.49.51.png)
+![Inner Product Argument Illustration](img/Screenshot%202023-08-03%20at%2004.53.35.png)
+![Merkle Tree Illustration](img/Screenshot%202023-08-03%20at%2004.55.45.png)
+
+
 
 ---
 
