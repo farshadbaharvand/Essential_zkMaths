@@ -73,7 +73,7 @@ Integers include negative numbers, zero, and positive numbers. They are the fund
 The set of **Rational Numbers** is denoted by:
 
 $$
-\mathbb{Q} = \{ \frac{p}{q} \ \bigg|\ p \in \mathbb{Z},\ q \in \mathbb{Z}\setminus \{0\}\}
+\mathbb{Q} = \{ \frac{p}{q} \ \bigg|\ p \in \mathbb{Z},\ q \in \mathbb{Z} \setminus \{0\}\}
 $$
 
 **Explanation:**  
