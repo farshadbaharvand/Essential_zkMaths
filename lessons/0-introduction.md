@@ -1304,7 +1304,10 @@ $$A(1), A(w), A(w^2), \dots, A(w^{n-1}) \quad \text{where } n \gg d$$
 - These polynomials are **encoded with Reed-Solomon codes**, extending evaluation points.
 - **Error amplification**: A small error in the computation spreads across the extended polynomial, allowing the verifier to detect inconsistencies.
 
-<img src="img/Screenshot 2023-02-19 at 18.28.18.png" alt="Reed-Solomon Encoding" style="width: 600px; object-fit: fill">
+
+
+![Reed-Solomon Encoding](img/Screenshot%202023-02-19%20at%2018.28.18.png)
+
 
 ---
 
@@ -1355,5 +1358,4 @@ Where `$g_i$` are elliptic curve points, and `$a_i$` are scalars.
 - [Bootcamps - ZKP / zkML](https://www.encode.club/programmes)  
 - [Discord Server](https://discord.gg/VSCHXqQE)  
 
-### Coming Soon
-- **Extropy Academy**: Advanced courses and bootcamps on ZKPs, cryptography, and zero-knowledge machine learning.
+
