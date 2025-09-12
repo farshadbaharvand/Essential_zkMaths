@@ -316,9 +316,7 @@ Since there are 7 days in a week:
 
 - If today is Monday (let’s call it day 1), what day will it be after 10 days?
 
-$$
-1 + 10 \equiv 11 \equiv 4 \pmod{7}
-$$
+$$1 + 10 \equiv 11 \equiv 4 \pmod{7}$$
 
 Day 4 is **Thursday**.
 
@@ -334,18 +332,14 @@ Example: Compute $$2^{10} \pmod{7}$$.
 1. Compute power: $$2^{10} = 1024$$
 2. Divide by 7: $$1024 = 146 \times 7 + 2$$  
 So:  
-$$
-2^{10} \equiv 2 \pmod{7}
-$$
+$$2^{10} \equiv 2 \pmod{7}$$
 
 ---
 
 ### 7.2 Modular Inverses
 The **modular inverse** of $$a \pmod{n}$$ is a number $$x$$ such that:
 
-$$
-a \cdot x \equiv 1 \pmod{n}
-$$
+$$a \cdot x \equiv 1 \pmod{n}$$
 
 Example: Find inverse of $$3 \pmod{7}$$.
 
