@@ -270,9 +270,7 @@ Find $$15 \pmod{12}$$.
 1. Divide 15 by 12: $$15 = 12 \times 1 + 3$$
 2. The remainder is **3**.  
 So:  
-$$
-15 \equiv 3 \pmod{12}
-$$
+$$15 \equiv 3 \pmod{12}$$
 
 ---
 
@@ -282,9 +280,7 @@ Find $$5 - 9 \pmod{12}$$.
 1. Compute directly: $$5 - 9 = -4$$
 2. Add modulus: $$-4 + 12 = 8$$  
 So:  
-$$
-5 - 9 \equiv 8 \pmod{12}
-$$
+$$5 - 9 \equiv 8 \pmod{12}$$
 
 ---
 
@@ -295,9 +291,7 @@ Find $$2 \times 8 \pmod{12}$$.
 2. Divide by 12: $$16 = 12 \times 1 + 4$$
 3. The remainder is **4**.  
 So:  
-$$
-2 \times 8 \equiv 4 \pmod{12}
-$$
+$$2 \times 8 \equiv 4 \pmod{12}$$
 
 ---
 
