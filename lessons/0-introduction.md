@@ -240,7 +240,9 @@ $$
 
 ### Visualization
 
-![Clock showing modular arithmetic example](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Clock_simple.svg/512px-Clock_simple.svg.png)  
+
+![Modular Arithmetic](img/Screenshot%202022-02-21%20at%2009.03.23.png)
+
 *On a clock, numbers wrap around after 12. This is exactly how modular arithmetic works.*
 
 ---
