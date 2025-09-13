@@ -49,14 +49,21 @@ P + Q = R
 - Point addition defines **scalar multiplication**: \(kP = P + P + \dots + P\) (k times).
 
 **Example**:
+If $$P = (x_1, y_1)$$ and $$Q = (x_2, y_2)$$, the formulas for **point addition** on an elliptic curve are:
 
-If $$\(P = (x_1, y_1)\)$$ and $$\(Q = (x_2, y_2)\)$$, the formulas for addition are:
+- **Slope**:
+$$
+m =
+\begin{cases} 
+\frac{y_2 - y_1}{x_2 - x_1} & \text{if } P \neq Q \\[2mm]
+\frac{3x_1^2 + a}{2y_1} & \text{if } P = Q
+\end{cases}
+$$
 
-- Slope: 
-$$m = \begin{cases} \frac{y_2 - y_1}{x_2 - x_1} & P \neq Q \\\frac{3x_1^2 + a}2y_1} &  = Q\end{cases}$$
-
-- Resulting point:
-$$x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1$$
+- **Resulting point**:
+$$
+x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1
+$$
 
 ---
 
