@@ -52,6 +52,7 @@ P + Q = R
 If $$P = (x_1, y_1)$$ and $$Q = (x_2, y_2)$$, the formulas for **point addition** on an elliptic curve are:
 
 - **Slope**:
+**Slope:**
 $$
 m =
 \begin{cases} 
@@ -60,7 +61,7 @@ m =
 \end{cases}
 $$
 
-- **Resulting point**:
+**Resulting point:**
 $$
 x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1
 $$
