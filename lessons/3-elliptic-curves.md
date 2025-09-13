@@ -55,8 +55,7 @@ If $$P = (x_1, y_1)$$ and $$Q = (x_2, y_2)$$, the formulas for **point addition*
 $$
 m =
 \begin{cases} 
-\frac{y_2 - y_1}{x_2 - x_1} & \text{if } P \neq Q \\[1em]
-\frac{3x_1^2 + a}{2y_1} & \text{if } P = Q
+\frac{y_2 - y_1}{x_2 - x_1} & \text{if } P \neq Q \frac{3x_1^2 + a}{2y_1} & \text if } P = Q
 \end{cases}
 $$
 
