@@ -126,9 +126,7 @@ $$
 
 # Modular Arithmetic, Group Theory, and Fields: A Comprehensive Guide
 
-This guide provides a **step-by-step, beginner-friendly explanation** of modular arithmetic, group theory, and fields, complete with **formulas, tables, examples, diagrams, and tips**. All content is formatted in Markdown and ready to save as a `.md` file.
 
----
 
 # A Guide to Modular Arithmetic
 
