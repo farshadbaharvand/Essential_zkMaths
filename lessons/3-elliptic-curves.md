@@ -51,14 +51,19 @@ P + Q = R
 **Example**:
 If $$P = (x_1, y_1)$$ and $$Q = (x_2, y_2)$$, the formulas for **point addition** on an elliptic curve are:
 
-- **Slope**:
 **Slope:**
-$$m =
-\frac{y_2 - y_1}{x_2 - x_1} & \text{if } P \neq Q \\[2mm]
-\frac{3x_1^2 + a}{2y_1} & \text{if } P = Q$$
+$$
+m =
+\begin{cases} 
+\frac{y_2 - y_1}{x_2 - x_1} & \text{if } P \neq Q \\[1em]
+\frac{3x_1^2 + a}{2y_1} & \text{if } P = Q
+\end{cases}
+$$
 
 **Resulting point:**
-$$x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1$$
+$$
+x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1
+$$
 
 ---
 
