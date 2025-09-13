@@ -50,21 +50,13 @@ P + Q = R
 
 **Example**:
 
-If \(P = (x_1, y_1)\) and \(Q = (x_2, y_2)\), the formulas for addition are:
+If $$\(P = (x_1, y_1)\)$$ and $$\(Q = (x_2, y_2)\)$$, the formulas for addition are:
 
 - Slope: 
-$$
-m = 
-\begin{cases} 
-\frac{y_2 - y_1}{x_2 - x_1} & P \neq Q \\
-\frac{3x_1^2 + a}{2y_1} & P = Q
-\end{cases}
-$$
+$$m = \begin{cases} \frac{y_2 - y_1}{x_2 - x_1} & P \neq Q \\\frac{3x_1^2 + a}2y_1} &  = Q\end{cases}$$
 
 - Resulting point:
-$$
-x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1
-$$
+$$x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1$$
 
 ---
 
