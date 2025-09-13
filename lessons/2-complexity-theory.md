@@ -18,7 +18,7 @@ We classify problems according to how the **time required** to solve them scales
 
 ---
 
-![Complexity Theory Overview](https://upload.wikimedia.org/wikipedia/commons/2/2a/P_np_np-complete_np-hard.svg)
+![complex theory](img/Screenshot%202022-03-01%20at%2011.04.49.png)
 
 *Figure: Relations between complexity classes P, NP, NP-complete, and NP-hard.*
 
@@ -98,7 +98,7 @@ Interactive proofs form the foundation of **zero-knowledge proofs (ZKPs)**:
 ### Common Complexities
 
 - \(O(1)\): Constant time
-- \(O(\log n)\): Logarithmic time
+- \(O($$\log n$$)\): Logarithmic time
 - \(O(n)\): Linear time
 - \(O(n \log n)\): Linearithmic time
 - \(O(n^2)\): Quadratic time
