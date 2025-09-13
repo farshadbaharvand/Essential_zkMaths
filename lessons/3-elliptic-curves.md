@@ -144,7 +144,7 @@ $$
 
 | Curve | Equation | Usage | Security |
 |-------|---------|-------|----------|
-| Curve25519 | \(y^2 = x^3 + 486662x^2 + x\) | ECDH key exchange | 128-bit |
+| Curve25519 | $$\(y^2 = x^3 + 486662x^2 + x\)$$ | ECDH key exchange | 128-bit |
 | BN254 / BN_128 | Pairing-friendly | Ethereum ZKSNARKS | 128-bit |
 | BLS12-381 | Pairing-friendly | ZCash | 128-bit |
 
@@ -163,7 +163,7 @@ $$
 ax^2 + y^2 = 1 + dx^2y^2
 $$
 
-- \(a = 1\) is the standard form; if \(a \neq 1\), called **Twisted Edwards Curves**.
+- \(a = 1\) is the standard form; if $$\(a \neq 1\)$$, called **Twisted Edwards Curves**.
 - They are **birationally equivalent** to Montgomery curves.
 - Advantages:
   - Unified formulas for addition and doubling
@@ -202,7 +202,7 @@ $$
 
 | Property | Montgomery Curves | Edwards Curves |
 |----------|-----------------|----------------|
-| Equation | \(By^2 = x^3 + Ax^2 + x\) | \(ax^2 + y^2 = 1 + dx^2y^2\) |
+| Equation | $$\(By^2 = x^3 + Ax^2 + x\)$$ | $$\(ax^2 + y^2 = 1 + dx^2y^2\)$$ |
 | Fast Addition | Moderate | Very Fast |
 | Fast Doubling | Moderate | Very Fast |
 | Common Use | Key Exchange | Digital Signatures |
