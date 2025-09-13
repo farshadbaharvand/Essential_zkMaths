@@ -2,7 +2,7 @@
 
 # Numbers 
 
-## 1. Integers
+## Integers
 
 The set of **Integers** is denoted by:
 
@@ -28,7 +28,7 @@ Integers include negative numbers, zero, and positive numbers. They are the fund
 
 ---
 
-## 2. Rational Numbers
+## Rational Numbers
 
 The set of **Rational Numbers** is denoted by:
 
@@ -50,7 +50,7 @@ Rational numbers are numbers that can be expressed as the fraction of two intege
 
 ---
 
-## 3. Real Numbers
+## Real Numbers
 
 The set of **Real Numbers** is denoted by:
 
@@ -74,7 +74,7 @@ Real numbers include all rational and irrational numbers. Irrational numbers, li
 
 ---
 
-## 4. Fields
+## Fields
 
 A **field** is a set equipped with two operations: **addition** and **multiplication**, satisfying certain properties (closure, associativity, identity, inverses, distributivity).
 
@@ -125,7 +125,6 @@ $$
 ---
 
 # Modular Arithmetic, Group Theory, and Fields: A Comprehensive Guide
-
 
 
 # A Guide to Modular Arithmetic
