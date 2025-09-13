@@ -47,22 +47,83 @@ P + Q = R
 
 - If \(P = Q\), the line is the **tangent** to the curve at \(P\) (point doubling).
 - Point addition defines **scalar multiplication**: \(kP = P + P + \dots + P\) (k times).
-If $$P = (x_1, y_1)$$ and $$Q = (x_2, y_2)$$, the formulas for **point addition** on an elliptic curve are:
 
-**Slope:**
+## Example: Point Addition on an Elliptic Curve
+
+Suppose we have an elliptic curve:
+
 $$
-m =
-\begin{cases} 
-\frac{y_2 - y_1}{x_2 - x_1} & \text{if } P \neq Q \\[1em]
-\frac{3x_1^2 + a}{2y_1} & \text{if } P = Q
-\end{cases}
+E: y^2 = x^3 + 2x + 3 \pmod{97}
 $$
 
-**Resulting point:**
+and two points on the curve:
+
 $$
-x_3 = m^2 - x_1 - x_2, \quad y_3 = m(x_1 - x_3) - y_1
+P = (3, 6), \quad Q = (10, 7).
 $$
 
+### Step 1: Compute the slope
+Since \(P \neq Q\), we use:
+
+$$
+m = \frac{y_2 - y_1}{x_2 - x_1} \pmod{97}
+$$
+
+Substitute values:
+
+$$
+m = \frac{7 - 6}{10 - 3} = \frac{1}{7} \pmod{97}.
+$$
+
+Now compute the modular inverse of \(7 \pmod{97}\):
+
+$$
+7^{-1} \equiv 14 \pmod{97}.
+$$
+
+So:
+
+$$
+m = 1 \cdot 14 = 14 \pmod{97}.
+$$
+
+### Step 2: Compute the resulting point
+We now compute the coordinates:
+
+$$
+x_3 = m^2 - x_1 - x_2 \pmod{97},
+$$
+
+$$
+x_3 = 14^2 - 3 - 10 = 196 - 13 = 183 \equiv 86 \pmod{97}.
+$$
+
+Then:
+
+$$
+y_3 = m(x_1 - x_3) - y_1 \pmod{97},
+$$
+
+$$
+y_3 = 14(3 - 86) - 6 = 14(-83) - 6.
+$$
+
+Reduce modulo \(97\):
+
+$$
+14 \cdot (-83) = -1162 \equiv 68 \pmod{97}.
+$$
+
+So:
+
+$$
+y_3 = 68 - 6 = 62 \pmod{97}.
+$$
+
+### Final Answer:
+$$
+P + Q = (86, 62).
+$$
 
 ---
 
