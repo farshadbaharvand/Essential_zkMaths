@@ -374,7 +374,7 @@ The number of elements in the field's set. Must be either:
 An element $g$ such that exponentiating it generates all nonzero elements:
 
 $$
-g^0, g^1, g^2, ..., g^{p-2} = \text{all nonzero elements}
+g^0, g^1, g^2, ..., g^{p-1} = \text{all nonzero elements}
 $$
 
 **Example: Finite Field $\mathbb{Z}^*_5$**
