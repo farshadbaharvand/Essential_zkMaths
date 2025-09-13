@@ -1,4 +1,3 @@
-
 # Elliptic Curves
 
 Elliptic curves are fundamental objects in **modern cryptography**, particularly for digital signatures, key exchange, and zero-knowledge proofs. They form a **mathematical group** under a special addition operation.
@@ -31,7 +30,7 @@ Elliptic curves form a **group** under the **point addition operation**. This me
 1. **Closure**: Adding any two points \(P\) and \(Q\) on the curve produces another point \(R\) on the curve.
 2. **Commutativity**: \(P + Q = Q + P\)
 3. **Associativity**: \((P + Q) + R = P + (Q + R)\)
-4. **Identity element**: The point at infinity \(\mathcal{O}\) acts as the identity: \(P + \mathcal{O} = P\)
+4. **Identity element**: The point at infinity $$\(\mathcal{O}\)$$ acts as the identity: \(P + \mathcal{O} = P\)
 5. **Inverse element**: For each \(P = (x, y)\), there exists \(-P = (x, -y)\) such that \(P + (-P) = \mathcal{O}\)
 
 ### 2.1 Point Addition
