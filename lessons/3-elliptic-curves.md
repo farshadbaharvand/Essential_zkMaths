@@ -63,7 +63,7 @@ P = (3, 6), \quad Q = (10, 7).
 $$
 
 ### Step 1: Compute the slope
-Since \(P \neq Q\), we use:
+Since $$\(P \neq Q\)$$, we use:
 
 $$
 m = \frac{y_2 - y_1}{x_2 - x_1} \pmod{97}
@@ -75,7 +75,7 @@ $$
 m = \frac{7 - 6}{10 - 3} = \frac{1}{7} \pmod{97}.
 $$
 
-Now compute the modular inverse of \(7 \pmod{97}\):
+Now compute the modular inverse of $$\(7 \pmod{97}\)$$:
 
 $$
 7^{-1} \equiv 14 \pmod{97}.
