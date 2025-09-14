@@ -35,3 +35,17 @@ Pester me via
 - **Chunk topics** into smaller areas  
 
 ---
+
+
+
+---
+
+## Notes Compiled & Extended by
+
+**Farshad Baharvand**  
+PhD in Physics, MSc in Quantum Information & Computation  
+- **Email**: farshad.baharvand@gmail.com 
+- **GitHub**: https://github.com/farshadbaharvand  
+- **LinkedIn**: www.linkedin.com/in/farshadbaharvand
+
+---
