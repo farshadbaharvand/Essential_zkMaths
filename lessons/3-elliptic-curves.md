@@ -240,44 +240,40 @@ Elliptic curves are not only useful for defining points and addition but also fo
 Scalar multiplication is the process of adding a point on an elliptic curve to itself repeatedly. Formally, given:
 
 - An elliptic curve \(E\) defined by:
-$$
-y^2 = x^3 + ax + b
-$$
-- A point \(P = (x, y)\) on the curve
-- A scalar \(k \in \mathbb{Z}^+\)
+$$y^2 = x^3 + ax + b$$
+- A point $$\(P = (x, y)\)$$ on the curve
+- A scalar $$\(k \in \mathbb{Z}^+\)$$
 
 The **scalar multiplication** is defined as:
 
-$$
-kP = \underbrace{P + P + \dots + P}_{k \text{ times}}
-$$
+$$kP = \underbrace{P + P + \dots + P}_{k \text{ times}}$$
 
-where the addition \(+\) is the **elliptic curve point addition**.
+where the addition $$\(+\)$$ is the **elliptic curve point addition**.
 
 ### Step-by-Step Example
 
-Suppose we have a point \(P\) on a curve \(E\):
+Suppose we have a point $$\(P\)$$ on a curve $$\(E\)$$:
 
-1. \(1P = P\)
-2. \(2P = P + P\) (point doubling)
-3. \(3P = 2P + P\)
-4. Continue this process up to \(kP\)
+1. $$\(1P = P\)$$
+2. $$\(2P = P + P\)$$ (point doubling)
+3. $$\(3P = 2P + P\)$$
+4. Continue this process up to $$\(kP\)$$
 
 **Important Notes**:
 
-- Scalar multiplication is **computationally easy** in the forward direction (computing \(kP\)).
-- Finding \(k\) given \(P\) and \(kP\) is hard, known as the **Elliptic Curve Discrete Logarithm Problem (ECDLP)**.
+- Scalar multiplication is **computationally easy** in the forward direction (computing $$\(kP\)$$).
+- Finding $$\(k\)$$ given $$\(P\)$$ and $$\(kP\)$$ is hard, known as the **Elliptic Curve Discrete Logarithm Problem (ECDLP)**.
 - This asymmetry underlies the security of ECC.
 
 ---
 
 ## 2. Roots of Unity on Elliptic Curves
 
-Over a finite field \(\mathbb{F}_p\) (where \(p\) is prime), an elliptic curve has a **finite number of points**, including the **point at infinity** \(\mathcal{O}\), which acts as the **identity element**.
+Over a finite field $$\(\mathbb{F}_p\)$$ (where $$\(p\)$$ is prime), an elliptic curve has a **finite number of points**, including the **point at infinity** $$\(\mathcal{O}\)$$, which acts as the **identity element**.
 
 ### Definition
 
-A **root of unity** on an elliptic curve is a point \(P\) such that when added to itself a certain number of times, it results in the identity element \(\mathcal{O}\):
+A **root of unity** on an elliptic curve is a point $$\(P\)$$ such that when added to itself a certain number of times, it results in the identity element $$\(\mathcal{O}\)$$:
 
 $$
 nP = \underbrace{P + P + \dots + P}_{n \text{ times}} = \mathcal{O}
