@@ -279,18 +279,18 @@ $$
 nP = \underbrace{P + P + \dots + P}_{n \text{ times}} = \mathcal{O}
 $$
 
-- The integer \(n\) is called the **order of the point** \(P\).
-- The smallest positive integer \(n\) satisfying this condition is the **exact order** of \(P\).
+- The integer $$\(n\)$$ is called the **order of the point** $$\(P\)$$.
+- The smallest positive integer $$\(n\)$$ satisfying this condition is the **exact order** of $$\(P\)$$.
 
 **Example Table of Orders**:
 
 | Point \(P\) | Scalar \(k\) | Result \(kP\) |
 |-------------|--------------|----------------|
-| \(P\)       | 1            | \(P\)          |
-| \(P\)       | 2            | \(2P = P + P\) |
-| \(P\)       | 3            | \(3P = 2P + P\)|
+| $$\(P\)$$       | 1            | $$\(P\)$$          |
+| $$\(P\)$$       | 2            | $$\(2P = P + P\)$$ |
+| $$\(P\)$$       | 3            | $$\(3P = 2P + P\)$$|
 | ...         | ...          | ...            |
-| \(P\)       | \(n\)        | \(nP = \mathcal{O}\) |
+| $$\(P\)$$       | $$\(n\)$$        | $$\(nP = \mathcal{O}\)$$ |
 
 ### Key Notes:
 
@@ -307,10 +307,10 @@ Scalar multiplication can be visualized geometrically:
 
 ![Visualizations](img/Screenshot%202022-02-19%20at%2016.01.36.png)
 
-- **Step 1:** Start with point \(P\)
-- **Step 2:** Add \(P\) to itself to get \(2P\) (point doubling)
-- **Step 3:** Continue adding \(P\) to reach \(3P, 4P, \dots\)
-- **Step 4:** Eventually, for some \(n\), \(nP = \mathcal{O}\)
+- **Step 1:** Start with point $$\(P\)$$
+- **Step 2:** Add $$\(P\)$$ to itself to get $$\(2P\)$$ (point doubling)
+- **Step 3:** Continue adding $$\(P\)$$ to reach $$\(3P, 4P, \dots\)$$
+- **Step 4:** Eventually, for some $$\(n\)$$, $$\(nP = \mathcal{O}\)$$
 
 These geometric visualizations help understand why the group structure holds.
 
