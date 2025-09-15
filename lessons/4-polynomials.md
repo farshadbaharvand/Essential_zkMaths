@@ -31,26 +31,16 @@ then this also implies:
 
 This property is fundamental in cryptography, particularly in **zero-knowledge proofs (ZKPs)**.
 
+
 ---
 
-## Adding, Multiplying, and Dividing Polynomials
+# Adding, Multiplying, and Dividing Polynomials
 
-Polynomials can be:
-
-- **Added**: sum coefficients of like powers
-- **Multiplied**: distributive property applied
-- **Divided**: polynomial long division
+In this guide, we will break down how to **add**, **multiply**, and **divide** polynomials step by step, with clear explanations, and examples.
 
 See more: [Polynomial arithmetic](https://en.wikipedia.org/wiki/Polynomial_arithmetic)
 
 ---
-# Adding, Multiplying, and Dividing Polynomials
-
-Polynomials are one of the most fundamental structures in algebra. They appear everywhere in mathematics, computer science, and cryptography. In this guide, we will break down how to **add**, **multiply**, and **divide** polynomials step by step, with clear explanations, examples, and visual aids.
-
----
-
-## 1. What is a Polynomial?
 
 A **polynomial** is an expression made up of terms that are constants multiplied by powers of a variable.
 
@@ -67,7 +57,7 @@ $$
 
 ---
 
-## 2. Adding Polynomials
+## Adding Polynomials
 
 ### Rule
 To add polynomials:
@@ -83,19 +73,13 @@ Q(x) = 2x^2 - 3x + 4
 $$
 
 **Step 1:** Line them up by powers of $x$:
-$$
-(3x^2 + 5x + 1) + (2x^2 - 3x + 4)
-$$
+$$(3x^2 + 5x + 1) + (2x^2 - 3x + 4)$$
 
 **Step 2:** Add coefficients of like terms:
-$$
-(3+2)x^2 + (5-3)x + (1+4)
-$$
+$$(3+2)x^2 + (5-3)x + (1+4)$$
 
 **Result:**
-$$
-P(x) + Q(x) = 5x^2 + 2x + 5
-$$
+$$P(x) + Q(x) = 5x^2 + 2x + 5$$
 
 ✅ **Tip:** Always align terms by their degree to avoid mistakes.
 
@@ -109,32 +93,20 @@ To subtract polynomials:
 - Then combine like terms.
 
 ### Example
-$$
-P(x) = 4x^3 - 2x + 6
-$$
-$$
-Q(x) = x^3 + 5x - 3
-$$
+$$P(x) = 4x^3 - 2x + 6$$
+$$Q(x) = x^3 + 5x - 3$$
 
 **Step 1:** Write subtraction:
-$$
-(4x^3 - 2x + 6) - (x^3 + 5x - 3)
-$$
+$$(4x^3 - 2x + 6) - (x^3 + 5x - 3)$$
 
 **Step 2:** Distribute the minus:
-$$
-4x^3 - 2x + 6 - x^3 - 5x + 3
-$$
+$$4x^3 - 2x + 6 - x^3 - 5x + 3$$
 
 **Step 3:** Combine like terms:
-$$
-(4-1)x^3 + (-2-5)x + (6+3)
-$$
+$$(4-1)x^3 + (-2-5)x + (6+3)$$
 
 **Result:**
-$$
-3x^3 - 7x + 9
-$$
+$$3x^3 - 7x + 9$$
 
 ---
 
