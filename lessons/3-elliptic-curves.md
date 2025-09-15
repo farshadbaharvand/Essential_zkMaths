@@ -377,7 +377,8 @@ Pairings have two main properties that make them useful:
 
 ### Linear Properties Derived
 
-Pairings also satisfy additive properties:$$e(P + P', Q) = e(P, Q) \cdot e(P', Q)$$ and $$e(P, Q + Q') = e(P, Q) \cdot e(P, Q')$$
+Pairings also satisfy additive properties:
+$$e(P + P', Q) = e(P, Q) \cdot e(P', Q)$$ and $$e(P, Q + Q') = e(P, Q) \cdot e(P, Q')$$
 
 These properties are crucial for constructing and verifying **arithmetic circuits** in ZKPs.
 
