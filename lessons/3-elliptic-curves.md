@@ -48,6 +48,9 @@ P + Q = R
 - If \(P = Q\), the line is the **tangent** to the curve at \(P\) (point doubling).
 - Point addition defines **scalar multiplication**: \(kP = P + P + \dots + P\) (k times).
 
+
+![Montgomery](img/mont.jpeg)
+
 ## Example: Point Addition on an Elliptic Curve
 
 Suppose we have an elliptic curve:
@@ -136,7 +139,6 @@ This tool allows you to:
 - Explore how the **point at infinity** serves as the identity element.
 - Experiment with different elliptic curves by adjusting parameters.
 
-![Elliptic Curve Interactive Tool](https://curves.xargs.org/preview.png)
 
 You can try it yourself here: [curves.xargs.org](https://curves.xargs.org/)
 
@@ -181,7 +183,7 @@ $$
 ax^2 + y^2 = 1 + dx^2y^2
 $$
 
-- \(a = 1\) is the standard form; if $$\(a \neq 1\)$$, called **Twisted Edwards Curves**.
+- $$\(a = 1\)$$ is the standard form; if $$\(a \neq 1\)$$, called **Twisted Edwards Curves**.
 - They are **birationally equivalent** to Montgomery curves.
 - Advantages:
   - Unified formulas for addition and doubling
@@ -230,7 +232,7 @@ $$
 
 ## 6. Key Notes
 
-1. **Identity element** is the point at infinity \(\mathcal{O}\).
+1. **Identity element** is the point at infinity $$\(\mathcal{O}\)$$.
 2. **Point addition** rules ensure the group structure.
 3. **Montgomery vs Edwards**: Choice depends on application.
 4. Security is based on **ECDLP**, which is hard to solve with classical computers.
@@ -365,23 +367,23 @@ $$
 
 where:
 
-- \(\mathbb{G}_1, \mathbb{G}_2\) are groups of **prime order \(p\)**
-- \(\mathbb{G}_T\) is a target group of the same order
-- \(p\) is a **large prime** defining the group order
+- $$\(\mathbb{G}_1, \mathbb{G}_2\)$$ are groups of **prime order \(p\)**
+- $$\(\mathbb{G}_T\)$$ is a target group of the same order
+- $$\(p\)$$ is a **large prime** defining the group order
 
 ### Key Properties
 
 Pairings have two main properties that make them useful:
 
 1. **Non-degeneracy**  
-   Ensures the pairing is not trivial: there exist points \(P \in \mathbb{G}_1\) and \(Q \in \mathbb{G}_2\) such that:
+   Ensures the pairing is not trivial: there exist points $$\(P \in \mathbb{G}_1\)$$ and $$\(Q \in \mathbb{G}_2\)$$ such that:
    $$
    e(P, Q) \neq 1
    $$
    This prevents all outputs from collapsing to the identity element.
 
 2. **Bilinearity**  
-   For all \(u \in \mathbb{G}_1\), \(v \in \mathbb{G}_2\), and scalars \(a, b \in \mathbb{Z}_p\):
+   For all $$\(u \in \mathbb{G}_1\)$$, $$\(v \in \mathbb{G}_2\)$$, and scalars $$\(a, b \in \mathbb{Z}_p\)$$:
    $$
    e(u^a, v^b) = e(u, v)^{ab}
    $$
