@@ -364,9 +364,7 @@ Pairings have two main properties that make them useful:
 
 1. **Non-degeneracy**  
    Ensures the pairing is not trivial: there exist points $$\(P \in \mathbb{G}_1\)$$ and $$\(Q \in \mathbb{G}_2\)$$ such that:
-   $$
-   e(P, Q) \neq 1
-   $$
+   $$e(P, Q) \neq 1$$
    This prevents all outputs from collapsing to the identity element.
 
 2. **Bilinearity**  
@@ -472,3 +470,4 @@ $$
 This enables **zero-knowledge verification** without revealing \(a\) or \(b\).
 
 **Tip:** Always use standardized pairing-friendly curves (e.g., **BN254**, **BLS12-381**) to avoid security pitfalls.
+
