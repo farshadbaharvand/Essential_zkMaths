@@ -4,7 +4,7 @@ Elliptic curves are fundamental objects in **modern cryptography**, particularly
 
 ---
 
-## 1. Definition
+## Definition
 
 An **elliptic curve** over a field is the set of points \((x, y)\) that satisfy an equation of the form:
 
@@ -23,7 +23,7 @@ $$
 
 ---
 
-## 2. Group Structure
+## Group Structure
 
 Elliptic curves form a **group** under the **point addition operation**. This means they satisfy the standard group axioms:
 
@@ -33,7 +33,7 @@ Elliptic curves form a **group** under the **point addition operation**. This me
 4. **Identity element**: The point at infinity $$\(\mathcal{O}\)$$ acts as the identity: \(P + $$\(\mathcal{O}\)$$ = P\)
 5. **Inverse element**: For each \(P = (x, y)\), there exists \(-P = (x, -y)\) such that \(P + (-P) = $$\(\mathcal{O}\)$$)
 
-### 2.1 Point Addition
+### Point Addition
 
 The **geometric rule** for adding two points \(P\) and \(Q\):
 
@@ -51,7 +51,7 @@ P + Q = R
 
 ![Montgomery](img/mont.jpeg)
 
-## Example: Point Addition on an Elliptic Curve
+### Example: Point Addition on an Elliptic Curve
 
 Suppose we have an elliptic curve:
 
@@ -65,7 +65,7 @@ $$
 P = (3, 6), \quad Q = (10, 7).
 $$
 
-### Step 1: Compute the slope
+#### Step 1: Compute the slope
 Since $$\(P \neq Q\)$$, we use:
 
 $$
@@ -90,7 +90,7 @@ $$
 m = 1 \cdot 14 = 14 \pmod{97}.
 $$
 
-### Step 2: Compute the resulting point
+#### Step 2: Compute the resulting point
 We now compute the coordinates:
 
 $$
@@ -123,7 +123,7 @@ $$
 y_3 = 68 - 6 = 62 \pmod{97}.
 $$
 
-### Final Answer:
+#### Final Answer:
 $$
 P + Q = (86, 62).
 $$
@@ -147,9 +147,9 @@ You can try it yourself here: [curves.xargs.org](https://curves.xargs.org/)
 
 
 ---
-## 3. Families of Curves
+## Families of Curves (Montgomery Curves and Edwards Curves )
 
-### 3.1 Montgomery Curves
+### Montgomery Curves
 
 ![Montgomery](img/mont.jpeg)
 
@@ -175,7 +175,7 @@ $$
 
 ---
 
-### 3.2 Edwards Curves
+### Edwards Curves
 
 Edwards curves have the general equation:
 
@@ -204,7 +204,7 @@ $$
 
 ---
 
-## 4. Summary Table
+### Summary Table
 
 | Property | Montgomery Curves | Edwards Curves |
 |----------|-----------------|----------------|
@@ -216,7 +216,7 @@ $$
 
 ---
 
-## 6. Key Notes
+### Key Notes
 
 1. **Identity element** is the point at infinity $$\(\mathcal{O}\)$$.
 2. **Point addition** rules ensure the group structure.
@@ -226,7 +226,7 @@ $$
 
 ---
 
-### References
+#### References
 
 1. [Curve25519 - DJB](https://cr.yp.to/ecdh.html)
 2. [BLS12-381 Curve](https://electriccoin.co/blog/new-snark-curve/)
@@ -239,22 +239,8 @@ $$
 
 Elliptic curves are not only useful for defining points and addition but also for **scalar multiplication**, which forms the backbone of elliptic curve cryptography (ECC). This section explains scalar multiplication and introduces **roots of unity** on elliptic curves.
 
----
 
-## 4. Scalar Multiplication
-
-**Scalar multiplication** is the repeated addition of a point:
-
-$$
-kP = \underbrace{P + P + \dots + P}_{k \text{ times}}
-$$
-
-- Fundamental for **ECC cryptography**.
-- Hard to reverse (Elliptic Curve Discrete Logarithm Problem, ECDLP).
-- Security relies on the difficulty of solving ECDLP.
-
-
-## 1. Scalar Multiplication
+## Scalar Multiplication
 
 Scalar multiplication is the process of adding a point on an elliptic curve to itself repeatedly. Formally, given:
 
@@ -288,7 +274,7 @@ Suppose we have a point $$\(P\)$$ on a curve $$\(E\)$$:
 
 ---
 
-## 2. Roots of Unity on Elliptic Curves
+## Roots of Unity on Elliptic Curves
 
 Over a finite field $$\(\mathbb{F}_p\)$$ (where $$\(p\)$$ is prime), an elliptic curve has a **finite number of points**, including the **point at infinity** $$\(\mathcal{O}\)$$, which acts as the **identity element**.
 
@@ -320,7 +306,7 @@ $$
 
 ---
 
-## 3. Visualizations
+## Visualizations
 
 Scalar multiplication can be visualized geometrically:
 
@@ -337,7 +323,7 @@ These geometric visualizations help understand why the group structure holds.
 
 ---
 
-## 4. References and Further Reading
+## References and Further Reading
 
 - **Book**: Serious Cryptography, Jean-Philippe Aumasson
 
@@ -358,7 +344,7 @@ Pairings are fundamental in many advanced cryptographic constructions, particula
 
 ---
 
-## 1. Introduction
+## Introduction
 
 A **pairing** (or **bilinear map**) is a function that takes two inputs from two elliptic curve groups and outputs an element in a third group:
 
@@ -410,7 +396,7 @@ These properties are crucial for constructing and verifying **arithmetic circuit
 
 ---
 
-## 2. Why Pairings Matter
+## Why Pairings Matter
 
 Pairings enable **checking relationships between points efficiently**. For example:
 
@@ -436,7 +422,7 @@ This allows a verifier to check relationships **without knowing the scalars expl
 
 ---
 
-## 3. Summary Table of Properties
+## Summary Table of Properties
 
 | Property           | Definition | Example |
 |-------------------|------------|---------|
@@ -447,7 +433,7 @@ This allows a verifier to check relationships **without knowing the scalars expl
 
 ---
 
-## 4. Visual Representation
+## Visual Representation
 
 ```
    G1 Elements      x       G2 Elements
@@ -463,7 +449,7 @@ This allows a verifier to check relationships **without knowing the scalars expl
 
 ---
 
-## 5. Notes and Tips
+## Notes and Tips
 
 - Pairings are **computationally expensive**, so cryptographic schemes aim to minimize the number of pairings required.
 - Bilinearity enables **succinct proofs**, which is why pairings are heavily used in **zk-SNARKs**.
@@ -472,7 +458,7 @@ This allows a verifier to check relationships **without knowing the scalars expl
 
 ---
 
-## 6. Applications in Arithmetic Circuits
+## Applications in Arithmetic Circuits
 
 Pairings allow verifying relationships in computations:
 
