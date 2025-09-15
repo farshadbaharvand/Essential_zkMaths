@@ -369,9 +369,7 @@ Pairings have two main properties that make them useful:
 
 2. **Bilinearity**  
    For all $$\(u \in \mathbb{G}_1\)$$, $$\(v \in \mathbb{G}_2\)$$, and scalars $$\(a, b \in \mathbb{Z}_p\)$$:
-   $$
-   e(u^a, v^b) = e(u, v)^{ab}
-   $$
+   $$e(u^a, v^b) = e(u, v)^{ab}$$
 
    **Implications:**
 
@@ -382,13 +380,10 @@ Pairings have two main properties that make them useful:
 
 Pairings also satisfy additive properties:
 
-$$
-e(P + P', Q) = e(P, Q) \cdot e(P', Q)
-$$
+$$e(P + P', Q) = e(P, Q) \cdot e(P', Q)$$
 
-$$
-e(P, Q + Q') = e(P, Q) \cdot e(P, Q')
-$$`
+
+$$e(P, Q + Q') = e(P, Q) \cdot e(P, Q')$$
 
 These properties are crucial for constructing and verifying **arithmetic circuits** in ZKPs.
 
@@ -412,9 +407,7 @@ Suppose we have:
 
 Then:
 
-$$
-e(P, Q) = e(aG_1, bG_2) = e(G_1, G_2)^{ab}
-$$`
+$$e(P, Q) = e(aG_1, bG_2) = e(G_1, G_2)^{ab}$$
 
 This allows a verifier to check relationships **without knowing the scalars explicitly**.
 
@@ -463,9 +456,7 @@ Pairings allow verifying relationships in computations:
 - If a circuit computes $$\(y = a \cdot b\)$$
 - Represent $$\(a\)$$ in $$\(\mathbb{G}_1\)$$, $$\(b\)$$ in $$\(\mathbb{G}_2\)$$
 - Use pairing to check:
-$$
-e(aG_1, bG_2) = e(G_1, G_2)^y
-$$
+$$e(aG_1, bG_2) = e(G_1, G_2)^y$$
 
 This enables **zero-knowledge verification** without revealing \(a\) or \(b\).
 
