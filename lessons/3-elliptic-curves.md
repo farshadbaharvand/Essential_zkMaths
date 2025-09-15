@@ -126,7 +126,25 @@ P + Q = (86, 62).
 $$
 
 ---
+## Interactive Visualization: Elliptic Curve Point Addition
 
+A highly recommended resource to **see elliptic curve operations in action** is the interactive website [The Animated Elliptic Curve](https://curves.xargs.org/).
+
+This tool allows you to:
+- Visualize how points on an elliptic curve are added.
+- Understand the role of the **tangent line** when doubling a point.
+- Explore how the **point at infinity** serves as the identity element.
+- Experiment with different elliptic curves by adjusting parameters.
+
+![Elliptic Curve Interactive Tool](https://curves.xargs.org/preview.png)
+
+You can try it yourself here: [curves.xargs.org](https://curves.xargs.org/)
+
+[GITHUB curves.xargs.org](https://github.com/syncsynchalt/animated-curves)
+
+
+
+---
 ## 3. Families of Curves
 
 ### 3.1 Montgomery Curves
