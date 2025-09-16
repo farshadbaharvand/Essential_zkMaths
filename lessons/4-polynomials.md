@@ -81,7 +81,7 @@ $$(3+2)x^2 + (5-3)x + (1+4)$$
 **Result:**
 $$P(x) + Q(x) = 5x^2 + 2x + 5$$
 
-✅ **Tip:** Always align terms by their degree to avoid mistakes.
+**Tip:** Always align terms by their degree to avoid mistakes.
 
 ---
 
@@ -186,8 +186,8 @@ $$(2x^3 + 3x^2 - x + 5) - (2x^3 + 2x^2) = x^2 - x + 5$$
 **Final Result:**
 $$2x^2 + x - 2 + \frac{7}{x+1}$$
 
-✅ **Quotient:** $2x^2 + x - 2$  
-✅ **Remainder:** $7$
+**Quotient:** $2x^2 + x - 2$  
+**Remainder:** $7$
 
 ---
 
