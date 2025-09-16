@@ -215,17 +215,13 @@ $$2x^2 + x - 2 + \frac{7}{x+1}$$
 
 For a polynomial $$P(x)$$ over a field $$\mathbb{K}$$, a **root** $$r$$ satisfies:
 
-$$
-P(r) = 0
-$$
+$$P(r) = 0$$
 
 **Divisibility**:
 
 A polynomial $$B(x)$$ divides another polynomial $$A(x)$$ if there exists a polynomial $$C(x)$$ such that:
 
-$$
-A(x) = B(x) \cdot C(x)
-$$
+$$A(x) = B(x) \cdot C(x)$$
 
 Notation: $$B | A$$
 
@@ -233,9 +229,7 @@ Notation: $$B | A$$
 
 If $$r$$ is a known root of a polynomial $$P(x)$$ of degree $$n$$, we can factor:
 
-$$
-P(x) = (x - r) Q(x)
-$$
+$$P(x) = (x - r) Q(x)$$
 
 where $$Q(x)$$ is a polynomial of degree $$n-1$$ obtained from polynomial division.
 
