@@ -320,6 +320,8 @@ Polynomials can be represented in **two main ways**:
 
    $$(x_1, y_1), (x_2, y_2), \dots$$
 
+   
+
    Here, each $y_i = f(x_i)$. This form is convenient for **evaluation-based protocols**, like those in zero-knowledge proofs.
 
 **Conversion Between Forms**:  
