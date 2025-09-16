@@ -85,7 +85,7 @@ $$P(x) + Q(x) = 5x^2 + 2x + 5$$
 
 ---
 
-## 3. Subtracting Polynomials
+## Subtracting Polynomials
 
 ### Rule
 To subtract polynomials:
@@ -152,7 +152,7 @@ $$3x^4 - x^3 + 10x^2 + 8x$$
 
 ---
 
-## 5. Dividing Polynomials
+## Dividing Polynomials
 
 ### Rule
 Use **long division** (like dividing numbers) or **synthetic division** (shortcut for special cases).
@@ -162,24 +162,16 @@ Use **long division** (like dividing numbers) or **synthetic division** (shortcu
 ### Example (Polynomial Long Division)
 
 Divide:
-$$
-\frac{2x^3 + 3x^2 - x + 5}{x + 1}
-$$
+$$\frac{2x^3 + 3x^2 - x + 5}{x + 1}$$
 
 **Step 1:** Divide first terms:
-$$
-\frac{2x^3}{x} = 2x^2
-$$
+$$\frac{2x^3}{x} = 2x^2$$
 
 **Step 2:** Multiply divisor by $2x^2$:
-$$
-(x+1)(2x^2) = 2x^3 + 2x^2
-$$
+$$(x+1)(2x^2) = 2x^3 + 2x^2$$
 
 **Step 3:** Subtract:
-$$
-(2x^3 + 3x^2 - x + 5) - (2x^3 + 2x^2) = x^2 - x + 5
-$$
+$$(2x^3 + 3x^2 - x + 5) - (2x^3 + 2x^2) = x^2 - x + 5$$
 
 **Step 4:** Repeat process:
 - Divide $x^2 / x = x$.
@@ -192,16 +184,14 @@ $$
 - Subtract: $(-2x + 5) - (-2x - 2) = 7$.
 
 **Final Result:**
-$$
-2x^2 + x - 2 + \frac{7}{x+1}
-$$
+$$2x^2 + x - 2 + \frac{7}{x+1}$$
 
 ✅ **Quotient:** $2x^2 + x - 2$  
 ✅ **Remainder:** $7$
 
 ---
 
-## 6. Summary Table
+## Summary Table
 
 | Operation | Rule | Example | Result |
 |-----------|------|---------|--------|
@@ -212,33 +202,12 @@ $$
 
 ---
 
-## 7. Visual Example of Polynomial Long Division
-
-![Polynomial Long Division](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Polynomial_long_division.png/500px-Polynomial_long_division.png)
-
-*Figure: Step-by-step process of dividing polynomials using long division.*
-
----
-
-## 8. Key Takeaways
+## Key Takeaways
 
 - **Addition/Subtraction**: Combine like terms.  
 - **Multiplication**: Use distributive property; be systematic to avoid missing terms.  
 - **Division**: Long division works like with numbers; quotient + remainder form.  
 - Always double-check by multiplying the quotient and divisor, then adding remainder.
-
----
-
-## 9. Extra Notes
-
-⚠️ **Common Pitfall:** Forgetting to subtract properly in long division. Always distribute the minus sign!  
-💡 **Tip:** Write polynomials in **standard form** (descending powers of $x$) before operating.  
-📘 **Application:** Polynomial arithmetic is used in coding theory, computer graphics, and cryptography (e.g., finite fields, elliptic curves).  
-
----
-
-
-
 
 ---
 
