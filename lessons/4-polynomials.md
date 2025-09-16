@@ -110,15 +110,13 @@ $$3x^3 - 7x + 9$$
 
 ---
 
-## 4. Multiplying Polynomials
+## Multiplying Polynomials
 
 ### Rule
 Use the **distributive property**: multiply each term of one polynomial by every term of the other.
 
 ### Example (Binomial × Binomial)
-$$
-(2x + 3)(x + 4)
-$$
+$$(2x + 3)(x + 4)$$
 
 **Step 1:** Distribute each term (FOIL method):
 - First: $2x \cdot x = 2x^2$
@@ -127,21 +125,15 @@ $$
 - Last: $3 \cdot 4 = 12$
 
 **Step 2:** Add results:
-$$
-2x^2 + 8x + 3x + 12
-$$
+$$2x^2 + 8x + 3x + 12$$
 
 **Step 3:** Combine like terms:
-$$
-2x^2 + 11x + 12
-$$
+$$2x^2 + 11x + 12$$
 
 ---
 
 ### Example (Polynomial × Polynomial)
-$$
-(3x^2 + 2x)(x^2 - x + 4)
-$$
+$$(3x^2 + 2x)(x^2 - x + 4)$$
 
 Multiply each term of the first polynomial:
 
@@ -153,14 +145,10 @@ Multiply each term of the first polynomial:
 - $2x \cdot 4 = 8x$
 
 **Now combine:**
-$$
-3x^4 + (-3x^3 + 2x^3) + (12x^2 - 2x^2) + 8x
-$$
+$$3x^4 + (-3x^3 + 2x^3) + (12x^2 - 2x^2) + 8x$$
 
 **Result:**
-$$
-3x^4 - x^3 + 10x^2 + 8x
-$$
+$$3x^4 - x^3 + 10x^2 + 8x$$
 
 ---
 
