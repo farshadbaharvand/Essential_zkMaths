@@ -279,20 +279,19 @@ This property is extensively used in cryptography and ZKPs to **encode informati
 
 Visualization:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interpolation_example_polynomial.svg/440px-Interpolation_example_polynomial.svg.png" alt="" style="object-fit: scale-down">
+![Interpolation example polynomial ](img/Interpolation_example_polynomial.svg.png)
 
 ---
-
 ## Summary Table: Polynomial Concepts
 
-| Concept                  | Definition / Rule                                         | Example                            |
-|---------------------------|-----------------------------------------------------------|------------------------------------|
-| Polynomial               | Expression with constants and variables                   | $3x^2 + 4x + 3$                   |
-| Root                     | $r$ s.t. $P(r) = 0$                                      | $x-2$ divides $x^2 -4$            |
-| Divisibility             | $B | A$ iff $A = BC$                                     | $(x-1) | (x^2-1)$                  |
-| Factoring                | $P(x) = (x-r)Q(x)$                                       | $x^2-3x+2 = (x-1)(x-2)$           |
-| Schwartz-Zippel Lemma    | Two non-equal polynomials intersect at ≤ degree points   | $f(x) \neq g(x)$ at most $d$ points|
-| Lagrange Interpolation   | Polynomial passes through $n$ points                     | 3 points → degree 2 polynomial     |
+| Concept                | Definition / Rule                                       | Example                             |
+|-------------------------|---------------------------------------------------------|-------------------------------------|
+| **Polynomial**          | Expression with constants and variables                 | $3x^2 + 4x + 3$                     |
+| **Root**                | $r$ such that $P(r) = 0$                               | $x-2$ divides $x^2 - 4$             |
+| **Divisibility**        | $B \mid A \iff A = BC$                                 | $(x-1) \mid (x^2 - 1)$              |
+| **Factoring**           | $P(x) = (x-r)Q(x)$                                     | $x^2 - 3x + 2 = (x-1)(x-2)$         |
+| **Schwartz–Zippel Lemma** | Two non-equal polynomials intersect at ≤ degree points | $f(x) \neq g(x)$ at most $d$ points |
+| **Lagrange Interpolation** | Polynomial passes through $n$ points                 | 3 points → degree 2 polynomial      |
 
 ---
 
