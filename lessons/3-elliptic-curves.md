@@ -375,6 +375,7 @@ Pairings have two main properties that make them useful:
    - Scalar multiplication in the input maps predictably to exponentiation in the output.
    - Allows efficient verification of linear relationships in cryptographic protocols.
 
+
 ### Linear Properties Derived
 
 Pairings also satisfy additive properties:

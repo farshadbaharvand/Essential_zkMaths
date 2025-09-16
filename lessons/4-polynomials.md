@@ -191,6 +191,7 @@ $$2x^2 + x - 2 + \frac{7}{x+1}$$
 
 ---
 
+
 ## Summary Table
 
 | Operation | Rule | Example | Result |

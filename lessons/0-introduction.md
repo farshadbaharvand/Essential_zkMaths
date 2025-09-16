@@ -1,5 +1,6 @@
 # Essential Maths for Zero Knowledge Proofs
 
+
 ## Laurence Kirk - Extropy.IO
 
 These notes are available at our [website](https://maths.extropy.io) or as a single [pdf](https://bit.ly/ExtropyMathsForZK)
