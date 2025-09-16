@@ -311,18 +311,14 @@ Polynomials can be represented in **two main ways**:
 1. **Coefficient Form**  
    Expressed directly using coefficients for each power of $x$:
 
-   $$
-   f(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \dots
-   $$
+   $$f(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \dots$$
 
    This is convenient for algebraic manipulation, addition, multiplication, and storing the polynomial compactly.
 
 2. **Point-Value Form**  
    Represented as a set of points:
 
-   $$
-   (x_1, y_1), (x_2, y_2), \dots
-   $$
+   $$(x_1, y_1), (x_2, y_2), \dots$$
 
    Here, each $y_i = f(x_i)$. This form is convenient for **evaluation-based protocols**, like those in zero-knowledge proofs.
 
