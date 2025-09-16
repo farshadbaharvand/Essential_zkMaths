@@ -5,12 +5,12 @@
 
 **Commitment schemes** are cryptographic primitives that allow a party to **commit to a value** while keeping it hidden, with the ability to later reveal it. They provide two essential properties:
 
-1. **Binding**: Given a commitment `$c$`, it is hard to find a different pair `(m', r')` such that the commitment equals `$c$`. This ensures that once a commitment is made, it cannot be changed without detection.
-2. **Hiding**: Given a commitment `$c$`, it is computationally hard to learn anything about the committed value `$m$`. This ensures that the committed value remains secret until revealed.
+1. **Binding**: Given a commitment $$c$$, it is hard to find a different pair $$(m', r')$$ such that the commitment equals $$c$$`. This ensures that once a commitment is made, it cannot be changed without detection.
+2. **Hiding**: Given a commitment $$c$$, it is computationally hard to learn anything about the committed value $$m$$. This ensures that the committed value remains secret until revealed.
 
 A **polynomial commitment** is a commitment that represents a polynomial succinctly, allowing verification of **evaluations at specific points** without revealing or transmitting the entire polynomial.  
 
-- Given a commitment `$c$` representing polynomial `$P(x)$`, a prover can convince a verifier of `$P(z)$` for some chosen `$z$`.
+- Given a commitment $$c$$ representing polynomial $$P(x)$$, a prover can convince a verifier of $$P(z)$$ for some chosen $$z$$.
 - This is particularly useful in **Zero-Knowledge Proofs (ZKPs)**, where polynomials can have **millions of terms**.
 
 **Workflow in ZKPs**:
