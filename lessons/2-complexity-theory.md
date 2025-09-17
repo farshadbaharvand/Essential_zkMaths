@@ -4,7 +4,7 @@ Complexity theory studies the **time and space requirements** to solve computati
 
 ---
 
-## 1. Introduction to Complexity
+## Introduction to Complexity
 
 We classify problems according to how the time required to solve them scales with input size \(n\). 
 
@@ -22,7 +22,7 @@ We classify problems according to how the time required to solve them scales wit
 ![complex theory](img/Screenshot%202022-03-01%20at%2011.04.49.png)
 
 
-## 2. Decision Problems
+## Decision Problems
 
 A **decision problem** is one with a **yes/no** answer.
 
@@ -35,7 +35,7 @@ A **decision problem** is one with a **yes/no** answer.
 
 ---
 
-## 3. Complexity Classes
+## Complexity Classes
 
 ### P
 
