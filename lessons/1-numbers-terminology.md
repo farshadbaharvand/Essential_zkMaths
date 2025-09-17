@@ -136,7 +136,7 @@ Modular arithmetic is a special kind of arithmetic where numbers **wrap around**
 
 ---
 
-## 1. Introduction to Modular Arithmetic
+## Introduction to Modular Arithmetic
 
 In modular arithmetic, we only care about the **remainder** after dividing a number by some fixed positive integer, called the **modulus**.
 
@@ -151,7 +151,7 @@ In other words, $$a$$ and $$b$$ leave the **same remainder** when divided by $$n
 
 ---
 
-## 2. Clock Analogy
+## Clock Analogy
 
 One of the most common examples of modular arithmetic is the **12-hour clock**.
 
@@ -173,7 +173,7 @@ $$
 
 ---
 
-## 3. Basic Properties of Modular Arithmetic
+## Basic Properties of Modular Arithmetic
 
 Here are some important rules:
 
@@ -188,7 +188,7 @@ Here are some important rules:
 
 ---
 
-## 4. Step-by-Step Examples
+## Step-by-Step Examples
 
 ### Example 1: Addition
 Find $$15 \pmod{12}$$.
@@ -221,22 +221,22 @@ $$2 \times 8 \equiv 4 \pmod{12}$$
 
 ---
 
-## 5. Modular Arithmetic in Practice
+## Modular Arithmetic in Practice
 
-### 5.1 Cryptography
+### Cryptography
 Modern encryption (RSA, Diffie–Hellman) uses modular arithmetic with very large primes.
 
-### 5.2 Computer Science
+### Computer Science
 Hash functions, pseudorandom number generators, and cyclic redundancy checks use modular arithmetic.
 
-### 5.3 Daily Life
+### Daily Life
 - Calculating days of the week (mod 7).
 - Determining leap years (mod 4).
 - Scheduling cycles.
 
 ---
 
-## 6. Examples with Days of the Week
+## Examples with Days of the Week
 
 Since there are 7 days in a week:
 
@@ -248,9 +248,9 @@ Day 4 is **Thursday**.
 
 ---
 
-## 7. Extended Concepts
+## Extended Concepts
 
-### 7.1 Modular Exponentiation
+### Modular Exponentiation
 This is very important in cryptography.
 
 Example: Compute $$2^{10} \pmod{7}$$.
@@ -262,7 +262,7 @@ $$2^{10} \equiv 2 \pmod{7}$$
 
 ---
 
-### 7.2 Modular Inverses
+### Modular Inverses
 The **modular inverse** of $$a \pmod{n}$$ is a number $$x$$ such that:
 
 $$a \cdot x \equiv 1 \pmod{n}$$
@@ -274,7 +274,7 @@ So the inverse of 3 modulo 7 is **5**.
 
 ---
 
-## 8. Summary Table
+## Summary Table
 
 | Concept               | Example                       | Result                  |
 |-----------------------|-------------------------------|-------------------------|
@@ -287,7 +287,7 @@ So the inverse of 3 modulo 7 is **5**.
 
 ---
 
-## 9. Common Pitfalls and Tips
+## Common Pitfalls and Tips
 
 - **Pitfall:** Forgetting to reduce after subtraction (negative results).  
   **Tip:** Always add the modulus to keep results in $$[0, n-1]$$.
