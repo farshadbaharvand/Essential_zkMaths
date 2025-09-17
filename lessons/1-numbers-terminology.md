@@ -1,4 +1,4 @@
-# Numbers and Terminology: A Beginner-Friendly Guide
+# Numbers and Terminology
 
 # Numbers 
 
@@ -71,6 +71,9 @@ Real numbers include all rational and irrational numbers. Irrational numbers, li
 |------------|----------------|
 | Rational   | 1/2, -3, 4     |
 | Irrational | π, √2, e       |
+
+
+![numbers](img/classification-of-numbers-diagram.png)
 
 ---
 
