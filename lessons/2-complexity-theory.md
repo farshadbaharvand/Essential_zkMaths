@@ -6,9 +6,9 @@ Complexity theory studies the **time and space requirements** to solve computati
 
 ## Introduction to Complexity
 
-We classify problems according to how the time required to solve them scales with input size \(n\). 
+We classify problems according to how the time required to solve them scales with input size $$\(n\)$$. 
 
-- **Polynomial-time problems (P)**: If the time required grows as \(O(n^k)\) for some constant \(k\), the problem is considered tractable.
+- **Polynomial-time problems (P)**: If the time required grows as $$\(O(n^k)\)$$ for some constant $$\(k\)$$, the problem is considered tractable.
 - **Verification**: We are also interested in how long it takes to **verify** a proposed solution once found.
 
 **Example**: The Travelling Salesman Problem (TSP) aims to find the shortest route visiting each city exactly once.
@@ -99,7 +99,7 @@ for i in 1..n:
         do_something()
 ```
 
-- The above algorithm is \(O(n^2)\) because the inner operation runs \(n \times n\) times.
+- The above algorithm is $$\(O(n^2)\)$$ because the inner operation runs $$\(n \times n\)$$ times.
 
 ### Visualization of Growth Rates
 
