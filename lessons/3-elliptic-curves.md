@@ -146,7 +146,7 @@ You can try it yourself here: [curves.xargs.org](https://curves.xargs.org/)
 
 
 
--# Families of Curves: Montgomery and Edwards Curves
+# Families of Curves: Montgomery and Edwards Curves
 
 Elliptic curves come in different **families** depending on their equation forms. Two of the most important types are **Montgomery curves** and **Edwards curves**. Both are widely used in cryptography, but for slightly different purposes.
 
