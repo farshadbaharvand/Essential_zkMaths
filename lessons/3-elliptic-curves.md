@@ -146,63 +146,78 @@ You can try it yourself here: [curves.xargs.org](https://curves.xargs.org/)
 
 
 
+-# Families of Curves: Montgomery and Edwards Curves
+
+Elliptic curves come in different **families** depending on their equation forms. Two of the most important types are **Montgomery curves** and **Edwards curves**. Both are widely used in cryptography, but for slightly different purposes.
+
 ---
-## Families of Curves (Montgomery Curves and Edwards Curves )
 
-### Montgomery Curves
+## Montgomery Curves
 
-![Montgomery](img/mont.jpeg)
-
-Montgomery curves have the form:
+A **Montgomery curve** has the general form:
 
 $$
 By^2 = x^3 + Ax^2 + x
 $$
 
-- Efficient for **scalar multiplication**, widely used in key exchange.
-- **Example curves**:
+- These curves are especially efficient for **scalar multiplication**, which is the main operation in elliptic curve cryptography.  
+- They are commonly used in **key exchange protocols** like ECDH (Elliptic Curve Diffie–Hellman).
 
-| Curve | Equation | Usage | Security |
-|-------|---------|-------|----------|
-| Curve25519 | $$\(y^2 = x^3 + 486662x^2 + x\)$$ | ECDH key exchange | 128-bit |
-| BN254 / BN_128 | Pairing-friendly | Ethereum ZKSNARKS | 128-bit |
-| BLS12-381 | Pairing-friendly | ZCash | 128-bit |
+### Example Curves
 
-**Notes**:
+| Curve      | Equation                                      | Usage                | Security |
+|------------|-----------------------------------------------|----------------------|----------|
+| Curve25519 | $$y^2 = x^3 + 486662x^2 + x$$                 | ECDH key exchange    | 128-bit  |
+| BN254      | Pairing-friendly curve                        | Ethereum zk-SNARKs   | 128-bit  |
+| BLS12-381  | Pairing-friendly curve                        | Zcash, Ethereum L2s  | 128-bit  |
 
-- Montgomery curves allow fast and secure **ECDH operations**.
-- They are resistant to certain side-channel attacks when implemented carefully.
+### Notes
+
+- Montgomery curves make **ECDH operations fast and secure**.  
+- They can be implemented to resist **side-channel attacks**.  
+- Curve25519 (a Montgomery curve) is one of the most widely used elliptic curves today.
 
 ---
 
-### Edwards Curves
+## Edwards Curves
 
-Edwards curves have the general equation:
+An **Edwards curve** has the general equation:
 
 $$
 ax^2 + y^2 = 1 + dx^2y^2
 $$
 
-- $$\(a = 1\)$$ is the standard form; if $$\(a \neq 1\)$$, called **Twisted Edwards Curves**.
-- They are **birationally equivalent** to Montgomery curves.
-- Advantages:
-  - Unified formulas for addition and doubling
-  - Faster implementations for signatures
+- If $$a = 1$$, it is in **standard Edwards form**.  
+- If $$a \neq 1$$, it is called a **Twisted Edwards Curve**.  
+- Edwards curves are **birationally equivalent** to Montgomery curves (you can convert between them).
 
-**Example:**
+### Advantages of Edwards Curves
 
-- Twisted Edwards curve for Ed25519:
+- They have **unified addition formulas**, meaning the same formula works for both point addition and doubling.  
+- This makes implementations simpler and less error-prone.  
+- They are often faster for **digital signatures**.
+
+### Example Curve: Ed25519
+
+A Twisted Edwards curve used in Ed25519 signatures:
 
 $$
 -x^2 + y^2 = 1 + \frac{-121665}{121666} x^2y^2
 $$
 
-**Tips**:
-
-- Edwards curves are preferred for **digital signatures** due to speed and simplicity.
-- Montgomery curves are preferred for **key exchange** due to secure scalar multiplication.
+This curve is equivalent to Curve25519 but expressed in Edwards form.
 
 ---
+
+## Summary
+
+- **Montgomery curves** → Best for **key exchange** (efficient scalar multiplication).  
+- **Edwards curves** → Best for **digital signatures** (fast and unified formulas).  
+
+Both curve families are critical in modern cryptography and often appear together in protocols:  
+- Curve25519 is used for secure key exchange.  
+- Ed25519 (its Edwards form) is used for fast, secure digital signatures.
+
 
 ### Summary Table
 

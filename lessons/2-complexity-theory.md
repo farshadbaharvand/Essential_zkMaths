@@ -238,9 +238,9 @@ This is done by designing the protocol so that the verifier’s view can be simu
 | Complexity | Formula | Description | Example |
 |------------|---------|-------------|---------|
 | **Constant** | $$O(1)$$ | Takes the same time regardless of input size | Accessing an array element |
-| **Logarithmic** | $$O(\log n)$$ | Grows very slowly as input increases | Binary search |
+| **Logarithmic** | $$O(\log  n)$$ | Grows very slowly as input increases | Binary search |
 | **Linear** | $$O(n)$$ | Time grows proportionally with input size | Summing array elements |
-| **Linearithmic** | $$O(n \log n)$$ | Common in efficient divide-and-conquer algorithms | Merge sort, Quick sort (avg) |
+| **Linearithmic** | $$O(n \log  n)$$ | Common in efficient divide-and-conquer algorithms | Merge sort, Quick sort (avg) |
 | **Quadratic** | $$O(n^2)$$ | Time grows with the square of input size | Bubble sort, checking all pairs |
 | **Exponential** | $$O(2^n)$$ | Doubles in time with each extra input element | Brute force SAT solving |
 | **Factorial** | $$O(n!)$$ | Extremely fast growth, infeasible for large inputs | Brute-forcing TSP |
