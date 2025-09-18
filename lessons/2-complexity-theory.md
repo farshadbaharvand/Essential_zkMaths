@@ -125,17 +125,106 @@ The famous **P vs NP problem** asks:
 This is one of the **biggest open problems** in computer science. A correct answer would have enormous consequences for cryptography, algorithms, and our understanding of computation.
 
 ---
+# Interactive Proofs (IP)
 
-## Interactive Proofs (IP)
+---
 
-Interactive proofs are the foundation of **zero-knowledge proofs (ZKPs)**:
+## What Are Interactive Proofs?
 
-- Instead of static proofs, they allow a prover and verifier to interact.
-- The verifier gains confidence in the correctness of a statement without learning the underlying secret.
-- IP systems are widely used in ZKP constructions.
+An **interactive proof (IP)** is a protocol between two parties:
+
+- **Prover (P):** Wants to convince the verifier that a statement is true.  
+- **Verifier (V):** Checks the validity of the statement but should not learn any extra secrets.
+
+Unlike classical proofs, interactive proofs involve **back-and-forth communication**.
+
+---
+
+## Why Are Interactive Proofs Important?
+
+- They are the foundation of **zero-knowledge proofs (ZKPs)**.  
+- The verifier becomes convinced of the truth of a statement without gaining access to the hidden data.  
+- Widely used in **cryptography** and **blockchain protocols**.
+
+---
+
+## Key Properties
+
+An interactive proof system has two main properties:
+
+1. **Completeness**  
+   - If the statement is **true**, an honest prover can convince the verifier with high probability.  
+   - Example: If $x$ is indeed in a certain set, then the verifier should accept after interaction.  
+
+2. **Soundness**  
+   - If the statement is **false**, no cheating prover can convince the verifier (except with small probability).  
+   - Example: If $x$ is not in the set, the verifier should reject, regardless of the prover’s strategy.  
+
+---
+
+## Example: Graph Non-Isomorphism
+
+Suppose the prover wants to convince the verifier that **two graphs $G_1$ and $G_2$ are not isomorphic** (cannot be transformed into each other by renaming nodes).
+
+### Protocol Steps:
+1. The verifier randomly picks one of the two graphs ($G_1$ or $G_2$) and permutes (relabels) it to form $H$.  
+2. The verifier sends $H$ to the prover.  
+3. The prover must answer which graph ($G_1$ or $G_2$) $H$ came from.  
+
+- If $G_1$ and $G_2$ are not isomorphic, the prover can always answer correctly.  
+- If they are isomorphic, the prover cannot do better than guessing (50% success).  
+
+This interactive process convinces the verifier **without revealing isomorphism mappings**.
+
+---
+
+## Interactive Proofs vs Classical Proofs
+
+| Feature | Classical Proof | Interactive Proof |
+|---------|-----------------|-------------------|
+| **Format** | One-way, static | Two-way, interactive |
+| **Verifier’s Role** | Reads and checks proof | Asks questions and verifies responses |
+| **Information Leakage** | May reveal secret | Can hide secret (basis for ZKPs) |
+| **Applications** | Mathematics, formal logic | Cryptography, blockchain, ZKPs |
+
+---
+
+## From Interactive Proofs to Zero-Knowledge Proofs
+
+An **interactive proof** can be strengthened into a **zero-knowledge proof** if it satisfies an additional property:
+
+- **Zero-Knowledge**: The verifier learns nothing beyond the validity of the statement.  
+
+This is done by designing the protocol so that the verifier’s view can be simulated **without** interaction with the prover.
+
+---
+
+## Formal Class: IP
+
+- **IP** is the class of problems that can be solved using interactive proofs.  
+- A famous result:  
+  $$ \text{IP} = \text{PSPACE} $$  
+  Meaning, anything that can be computed with polynomial space can also be verified with an interactive proof.
+
+---
+
+## Applications in Blockchain and Cryptography
+
+- **Zero-Knowledge Proofs (ZKPs):** SNARKs, STARKs.  
+- **Authentication protocols:** Prove identity without revealing password.  
+- **Secure multiparty computation:** Parties jointly compute functions without revealing inputs.  
+
+---
+
+## Summary
+
+- **Interactive Proofs (IP)** involve dialogue between prover and verifier.  
+- They ensure **completeness** (true statements accepted) and **soundness** (false statements rejected).  
+- They are the **foundation of ZKPs**, which add the **zero-knowledge** property.  
+- They are deeply connected to complexity theory ($\text{IP} = \text{PSPACE}$).  
+- Widely applied in **blockchains, privacy, and cryptography**.  
 
 **Reference**: [Everything provable is provable in zero knowledge](https://dl.acm.org/doi/pdf/10.5555/88314.88333)
-
 
 ---
 
